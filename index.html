@@ -14,7 +14,7 @@
   <style>
     body {
       font-family: 'Palatino',serif;
-      padding-top: 60px;
+      padding-top: 120px;
       font-size: 20px;
       line-height: 30px;
     }
@@ -41,10 +41,11 @@
        padding-left: 0px;
     }
 
-    @media (min-width: 1200px) {
-      .container {
-          width: 1000px;
-      }
+    :target::before {
+      content: "";
+      display: block;
+      height: 60px; /* fixed header height*/
+      margin: -60px 0 0; /* negative fixed header height */
     }
 
     @media (min-width: 768px) {
@@ -57,13 +58,30 @@
       .navbar .navbar-collapse {
         text-align: center;
       }
+
+      :target::before {
+        height: 120px; /* fixed header height*/
+        margin: -120px 0 0; /* negative fixed header height */
+      }
     }
 
-    :target::before {
-      content: "";
-      display: block;
-      height: 60px; /* fixed header height*/
-      margin: -60px 0 0; /* negative fixed header height */
+    @media (min-width: 1200px) {
+      .container {
+          width: 1000px;
+      }
+
+      #header {
+          width: 1200px;
+      }
+
+      body {
+	    padding-top: 60px;
+	  }
+
+      :target::before {
+        height: 60px; /* fixed header height*/
+        margin: -60px 0 0; /* negative fixed header height */
+      }
     }
   </style>
 
@@ -318,6 +336,7 @@
         <p>
           <a href="http://research.fb.com"><img src="facebook.png" height="80px"/></a>
           <a href="http://deepmind.com"><img src="deepmind.png" height="80px"/></a>
+          <a href="https://cbmm.mit.edu/"><img src="cbmm.png" height="100px"/></a>
         </p>
         </div>
 
