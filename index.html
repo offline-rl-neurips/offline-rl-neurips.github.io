@@ -1,757 +1,171 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+---
 
-<head>
-  <meta charset="utf-8">
-  <title>Bridging AI and Cognitive Science (BAICS)</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<div class="row">
+<p>
+Cognitive science and artificial intelligence (AI) have a long-standing
+shared history. Early research in AI was inspired by human intelligence
+and shaped by cognitive scientists (e.g., Elman, 1990; Rumelhart and McClelland,
+1986).  At the same time, efforts in understanding human learning and
+processing used methods and data borrowed from AI to build cognitive
+models that mimicked human cognition (e.g., Anderson, 1975; Tenenbaum et al., 2006;
+Lieder & Griffiths, 2017; Dupoux, 2018). 
+In the last five years the field of AI has grown rapidly due to the success of
+large-scale deep learning models in a variety of applications (such as
+speech recognition and image classification).  Interestingly,
+algorithms and architectures in these models are often loosely inspired
+by natural forms of cognition (such as convolutional architectures and
+experience replay; e.g. Hassabis et al., 2017).  
+In turn, the improvement of these algorithms and architectures enabled more advanced
+models of human cognition that can replicate, and therefore enlighten
+our understanding of, human behavior (Yamins & DiCarlo, 2016; Fan et al., 2018;
+Banino et al., 2018; Bourgin et al., 2019).
+  Empirical data from cognitive psychology has also recently played an
+important role in measuring how current AI systems differ from humans
+and in identifying their failure modes (e.g., Linzen et al., 2016; Lake
+et al., 2017; Gopnik, 2017; Nematzadeh et al., 2018; Peterson et al., 2019;
+Hamrick, 2019).
+</p>
+<p>
+The recent advancements in AI confirm the success of a multidisciplinary approach inspired by
+human cognition. However, the large body of literature supporting each field makes it more difficult
+for researchers to engage in multidisciplinary research without collaborating. Yet, outside
+domain-specific subfields, there are few forums that enable researchers in AI to actually connect
+with people from the cognitive sciences and form such collaborations. Our workshop aims to inspire
+connections between AI and cognitive science across a broad set of topics, including perception,
+language, reinforcement learning, planning, human-robot interaction, animal cognition, child development,
+and reasoning.
+</p>
+</div>
 
-  <link href="css/style.css" rel="stylesheet">
-</head>
+<div id="sponsors" class="row">
+<h2>Sponsors</h2>
+<div class="break"></div>
+<div>
+<p>
+  <a href="http://research.fb.com"><img src="images/facebook.png" height="80px"/></a>
+  <a href="http://deepmind.com"><img src="images/deepmind.png" height="80px"/></a>
+  <a href="https://cbmm.mit.edu/"><img src="images/cbmm.png" height="100px"/></a>
+</p>
+<p>Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.</p>
+</div>
+</div>
 
-<div class="navbar navbar-default navbar-fixed-top" id="navbar">
+<div id="organizers" class="row">
+<h2>Organizers</h2>
+<div class="break"></div>
+<ul>
+  <li><b><a href="http://www.jesshamrick.com/">Jessica Hamrick</a></b> (DeepMind)</li>
+  <li><b><a href="http://www.aidanematzadeh.me/">Aida Nematzadeh</a></b> (DeepMind)</li>
+  <li><b><a href="https://kayburns.github.io/">Kaylee Burns</a></b> (Stanford University)</li>
+  <li><b><a href="http://www.lscp.net/persons/dupoux/">Emmanuel Dupoux</a></b> (&Eacute;cole des Hautes Etudes en Sciences Sociales)</li>
+  <li><b><a href="http://alisongopnik.com/">Alison Gopnik</a></b> (UC Berkeley)</li>
+  <li><b><a href="http://web.mit.edu/cocosci/josh.html">Josh Tenenbaum</a></b> (MIT)</li>
+</ul>
+</div>
 
-  <div class="container" id="header">
-
-    <div class="navbar-header">
-
-      <button class="navbar-toggle"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbar-main">
-
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-
-      </button>
-
-    </div> <!-- navbar-header -->
-
-    <div class="navbar-collapse collapse" id="navbar-main">
-
-      <ul class="nav navbar-nav">
-        <!-- <li><a href="#important-dates">Important Dates</a></li> -->
-        <li><a href="#schedule">Schedule</a></li>
-        <li><a href="#invited-speakers">Invited Speakers</a></li>
-        <li><a href="#program">Program</a></li>
-        <li><a href="#sponsors">Sponsors</a></li>
-        <li><a href="#organizers">Organizers</a></li>
-        <li><a href="#pc">Program Committee</a></li>
-      </ul>
-
-    </div> <!-- navbar-main -->
-
-  </div>
-
-</div> <!-- navbar -->
-
-<body>
-
-  <div class="container" id="content">
-
-    <div class="page-content">
-
-      <div class="row" id="title">
-
-        <h1 class="text-center">Bridging AI and Cognitive Science (BAICS)</h1>
-        <h4 class="text-center"><a href="https://iclr.cc/Conferences/2020">International Conference on Learning Representations (ICLR)</a></h4>
-        <h4 class="text-center">April 26, 2020</h4>
-        <hr>
-
-      </div> <!-- row -->
-
-      <div class="row" id="introduction">
-
-        <p>
-        Cognitive science and artificial intelligence (AI) have a long-standing
-        shared history. Early research in AI was inspired by human intelligence
-        and shaped by cognitive scientists (e.g., Elman, 1990; Rumelhart and McClelland,
-        1986).  At the same time, efforts in understanding human learning and
-        processing used methods and data borrowed from AI to build cognitive
-        models that mimicked human cognition (e.g., Anderson, 1975; Tenenbaum et al., 2006;
-        Lieder & Griffiths, 2017; Dupoux, 2018). 
-        In the last five years the field of AI has grown rapidly due to the success of
-        large-scale deep learning models in a variety of applications (such as
-        speech recognition and image classification).  Interestingly,
-        algorithms and architectures in these models are often loosely inspired
-        by natural forms of cognition (such as convolutional architectures and
-        experience replay; e.g. Hassabis et al., 2017).  
-        In turn, the improvement of these algorithms and architectures enabled more advanced
-        models of human cognition that can replicate, and therefore enlighten
-        our understanding of, human behavior (Yamins & DiCarlo, 2016; Fan et al., 2018;
-        Banino et al., 2018; Bourgin et al., 2019).
-          Empirical data from cognitive psychology has also recently played an
-        important role in measuring how current AI systems differ from humans
-        and in identifying their failure modes (e.g., Linzen et al., 2016; Lake
-        et al., 2017; Gopnik, 2017; Nematzadeh et al., 2018; Peterson et al., 2019;
-        Hamrick, 2019).
-        </p>
-        <p>  
-        The recent advancements in AI confirm the success of a multidisciplinary approach inspired by
-        human cognition. However, the large body of literature supporting each field makes it more difficult
-        for researchers to engage in multidisciplinary research without collaborating. Yet, outside
-        domain-specific subfields, there are few forums that enable researchers in AI to actually connect
-        with people from the cognitive sciences and form such collaborations. Our workshop aims to inspire
-        connections between AI and cognitive science across a broad set of topics, including perception,
-        language, reinforcement learning, planning, human-robot interaction, animal cognition, child development,
-        and reasoning.
-        </p>
-
-      </div> <!-- introduction -->
-
-      <div class="row" id="schedule">
-
-        <h2>Schedule</h2>
-        <p>The virtual workshop will consist of a mix of pre-recorded and live content:
-          <ul>
-            <li>Invited, contributed, and spotlight talks will be pre-recorded and streamed on the day of the workshop at the times listed below. Spotlights will be streamed twice (once before each poster session).</li>
-            <li>All pre-recorded content will also be made available and can be viewed asynchronously at a time of your choosing.</li>
-            <li>There will be a live panel discussion with invited speakers and senior organizers from 4-5pm GMT.</li>
-            <li>During the two virtual "poster" sessions, each paper will have its own dedicated live video chatroom. We encourage you to view the presentation associated with papers you find interesting, and then to join the corresponding chatroom to ask questions and engage in further discussion.</li>
-          </ul>
-        </p>
-
-        <p>All times listed are in GMT. Please <a href="https://www.timeanddate.com/worldclock/converter.html?iso=20200426T133000&p1=tz_gmt" target="_blank">click here</a> for a timezone converter from GMT.</p>
-        <table class="table table-striped table-condensed">
-          <thead>
-            <tr>
-              <th class="time">Time (GMT)</th>
-              <th>Speaker</th>
-              <th>Title</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1:30pm - 2:00pm</td>
-              <td></td>
-              <td>Paper Spotlights</td>
-            </tr>
-            <tr>
-              <td>2:00pm - 3:00pm</td>
-              <td></td>
-              <td>Virtual Poster Session #1</td>
-            </tr>
-            <tr>
-              <td>3:15pm - 3:30pm</td>
-              <td>Jessica Hamrick, Aida Nematzadeh, Kaylee Burns</td>
-              <td>Opening Remarks</td>
-            </tr>
-            <tr>
-              <td>3:30pm - 4:00pm</td>
-              <td>Laura Schulz</td>
-              <td>TBA</td>
-            </tr>
-            <tr>
-              <td>4:00pm - 5:00pm</td>
-              <td>TBC</td>
-              <td>Live Panel Discussion</td>
-            </tr>
-            <tr>
-              <td>5:00pm - 5:30pm</td>
-              <td>Kim Stachenfeld</td>
-              <td>TBA</td>
-            </tr>
-            <tr>
-              <td>5:30pm - 5:45pm</td>
-              <td>Gido M van de Ven</td>
-              <td><a href="papers/BAICS_8.pdf" target="_blank">Brain-like replay for continual learning with artificial neural networks</a></td>
-            </tr>
-            <tr>
-              <td>5:45pm - 6:15pm</td>
-              <td>Leslie Kaelbling</td>
-              <td>TBA</td>
-            </tr>
-            <tr>
-              <td>6:15pm - 6:30pm</td>
-              <td>Eliza Kosoy</td>
-              <td><a href="papers/BAICS_24.pdf" target="_blank">Exploring Exploration: Comparing Children with RL agents in Unified Environments</a></td>
-            </tr>
-            <tr>
-              <td>6:30pm - 7:00pm</td>
-              <td>Maithilee Kunda</td>
-              <td>TBA</td>
-            </tr>
-            <tr>
-              <td>7:00pm - 7:15pm</td>
-              <td>Angela Radulescu, Bas van Opheusden</td>
-              <td><a href="papers/BAICS_33.pdf" target="_blank">From heuristic to optimal models in naturalistic visual search</a></td>
-            </tr>
-            <tr>
-              <td>7:15pm - 7:45pm</td>
-              <td>Judy Fan</td>
-              <td>TBA</td>
-            </tr>
-            <tr>
-              <td>7:45pm - 8:00pm</td>
-              <td>Hyunwoo Kim</td>
-              <td><a href="papers/BAICS_5.pdf" target="_blank">Public Self-consciousness for Endowing Consistent Persona to Dialogue Agents</a></td>
-            </tr>
-            <tr>
-              <td>8:00pm - 8:30pm</td>
-              <td>Yejin Choi</td>
-              <td>TBA</td>
-            </tr>
-            <tr>
-              <td>8:30pm - 9:00pm</td>
-              <td></td>
-              <td>Paper Spotlights</td>
-            </tr>
-            <tr>
-              <td>9:00pm - 10:00pm</td>
-              <td></td>
-              <td>Virtual Poster Session #2</td>
-            </tr>
-          </tbody>
-        </table>
-
-      </div> <!-- schedule -->
-
-      <div class="row" id="invited-speakers">
-
-        <h2>Invited Speakers</h2>
-        <p>
-        <table class="table">
-          <tbody>
-            <tr>
-              <td><img src="images/yejin.png" width="200px"/></td>
-              <td><b><a href="https://homes.cs.washington.edu/~yejin/">Yejin Choi</a></b> is an Associate Professor at the Paul G. Allen School of Computer Science & Engineering at the University of Washington and also a senior research manager at AI2 overseeing the project Mosaic. Her recent research focus on commonsense knowledge and reasoning, neural language generation, and language grounding with vision. She was a recepient of Borg Early Career Award (BECA) in 2018, among the IEEE’s AI Top 10 to Watch in 2015, a co-recipient of the Marr Prize at ICCV 2013, and a faculty advisor for the Sounding Board team that won the inaugural Alexa Prize Challenge in 2017.  </td>
-            </tr>
-            <tr>
-              <td><img src="images/judy.png" width="200px"/></td>
-              <td><b><a href="https://cogtoolslab.github.io/about.html">Judy Fan</a></b> is an Assistant Professor of Psychology at the University of California, San Diego. The goal of her research is to reverse engineer the human cognitive toolkit, especially how people use physical representations of thought to learn, communicate, and create. Towards this end, her lab employs converging approaches from cognitive science, computational neuroscience, and artificial intelligence.</td>
-            </tr>
-            <tr>
-              <td><img src="images/leslie.jpg" width="200px"/></td>
-              <td><b><a href="https://people.csail.mit.edu/lpk/">Leslie Kaelbling</a></b> is a Professor at MIT. She has an undergraduate degree in Philosophy and a PhD in Computer Science from Stanford, and was previously on the faculty at Brown University. She was the founding editor-in-chief of the Journal of Machine Learning Research. Her research agenda is to make intelligent robots using methods including estimation, learning, planning, and reasoning. She is not a robot.</td>
-            </tr>
-            <tr>
-              <td><img src="images/maithilee.png" width="200px"/></td>
-              <td><b><a href="https://my.vanderbilt.edu/mkunda/">Maithilee Kunda</a></b> is an Assistant Professor of Computer Science and Computer Engineering at Vanderbilt University. Her work in artificial intelligence, in the area of cognitive systems, looks at how visual thinking contributes to learning and intelligent behavior, with a focus on applications for individuals on the autism spectrum. </td>
-            </tr>
-            <tr>
-              <td><img src="images/laura.png" width="200px"/></td>
-              <td><b><a href="http://eccl.mit.edu/people.htm">Laura Schulz</a></b> is a Professor of Cognitive Science MIT, where she is the Principal Investigator of the Early Childhood Cognition Lab. She studies how our commonsense understanding of the physical and social world is constructed during early childhood by investigating 1) how children infer the concepts and causal relations that enable them to engage in accurate prediction, explanation, and intervention; 2) the factors that support curiosity and exploration, allowing children to engage in effective discovery and 3) how these abilities inform and interact with social cognition to support intuitive theories of the self and others.</td>
-            </tr>
-            <tr>
-              <td><img src="images/kim.png" width="200px"/></td>
-              <td><b><a href="https://neurokim.com/">Kimberly Stachenfeld</a></b> is a neuroscientist at DeepMind studying computational neuroscience and machine learning. Her research focuses on (1) the neural mechanisms for learning relational structure in service of efficient reinforcement learning and (2) how to get machines to do something similar.</td>
-            </tr>
-          </tbody>
-        </table>
-        </p>
-
-      </div> <!-- invited-speakers -->
-
-      <div class="row" id="program">
-        <h2>Program</h2>
-        <h3>Blue Sky Ideas Track</h3>
-        <div>
+<div id="pc" class="row">
+<h2>Program Committee</h2>
 <table>
-          <tr><td>
-          <p><b><a href="papers/BAICS_24.pdf" target="_blank">Exploring Exploration: Comparing Children with RL agents in Unified Environments</a></b> (Oral)</p>
-          <p>Eliza Kosoy, Jasmine Collins, David Chan, Jessica Hamrick, Sandy H Huang, John F Canny, and Alison Gopnik</p>
-          <p>Virtual Poster Session #2 (9-10pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_6.pdf" target="_blank">Levels of Analysis for Machine Learning</a></b> (Spotlight)</p>
-          <p>Jessica Hamrick and Shakir Mohamed</p>
-          <p>Virtual Poster Session #1 (2-3pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_39.pdf" target="_blank">Mental models for neural models</a></b> (Spotlight)</p>
-          <p>Owen Lewis</p>
-          <p>Virtual Poster Session #2 (9-10pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_36.pdf" target="_blank">Cognitive Architectures for Introspecting Deep Reinforcement Learning Agents</a></b> (Spotlight)</p>
-          <p>Konstantinos Mitsopoulos, Sterling Somers, Christian Lebiere, and Robert Thomson</p>
-          <p>Virtual Poster Session #2 (9-10pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_25.pdf" target="_blank">Ecological Semantics: Programming Environments for Situated Language Understanding</a></b> (Spotlight)</p>
-          <p>Ronen Tamari, Gabriel Stanovsky, Dafna Shahaf, and Reut Tsarfaty</p>
-          <p>Virtual Poster Session #1 (2-3pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_40.pdf" target="_blank">Towards modeling the developmental variability of human attention</a></b> (Spotlight)</p>
-          <p>Daniel Yamins, Kun Ho Kim, Megumi Sano, Julian De Freitas, and Nick Haber</p>
-          <p>Virtual Poster Session #2 (9-10pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_22.pdf" target="_blank">On Memory in Human and Artificial Language Processing Systems</a></b> </p>
-          <p>Aida Nematzadeh, Sebastian Ruder, and Dani Yogatama</p>
-          <p>Virtual Poster Session #2 (9-10pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_10.pdf" target="_blank">Deep Learning Needs a Prefrontal Cortex</a></b> </p>
-          <p>Jacob L Russin, Randall O'Reilly, and Yoshua Bengio</p>
-          <p>Virtual Poster Session #2 (9-10pm GMT)</p>
-          </td></tr>
-      </table>
-        </div>
-        <h3>Research Track</h3>
-        <div>
-<table>
-          <tr><td>
-          <p><b><a href="papers/BAICS_5.pdf" target="_blank">Public Self-consciousness for Endowing Consistent Persona to Dialogue Agents</a></b> (Oral)</p>
-          <p>Hyunwoo Kim, Byeongchang Kim, and Gunhee Kim</p>
-          <p>Virtual Poster Session #1 (2-3pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_33.pdf" target="_blank">From heuristic to optimal models in naturalistic visual search</a></b> (Oral)</p>
-          <p>Angela Radulescu, Bas van Opheusden, Frederick Callaway, Thomas Griffiths, and James Hillis</p>
-          <p>Virtual Poster Session #1 (2-3pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_8.pdf" target="_blank">Brain-like replay for continual learning with artificial neural networks</a></b> (Oral)</p>
-          <p>Gido M van de Ven, Hava Siegelmann, and Andreas Tolias</p>
-          <p>Virtual Poster Session #2 (9-10pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_1.pdf" target="_blank">What can human minimal videos tell us about dynamic recognition models?</a></b> (Spotlight)</p>
-          <p>Guy Ben-Yosef, Gabriel Kreiman, and Shimon Ullman</p>
-          <p>Virtual Poster Session #1 (2-3pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_20.pdf" target="_blank">Model Zoology and Neural Taskonomy for Better Characterizing Mouse Visual Cortex</a></b> (Spotlight)</p>
-          <p>Colin Conwell, Michael Buice, Andrei Barbu, and George Alvarez</p>
-          <p>Virtual Poster Session #2 (9-10pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_31.pdf" target="_blank">Probabilistic Successor Features Allow for Flexible Behaviour</a></b> (Spotlight)</p>
-          <p>Jesse Geerts, Kimberly Stachenfeld, and Neil Burgess</p>
-          <p>Virtual Poster Session #1 (2-3pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_0.pdf" target="_blank">Entropy Minimization In Emergent Languages</a></b> (Spotlight)</p>
-          <p>Eugene Kharitonov, Rahma Chaabouni, Diane Bouchacourt, and Marco Baroni</p>
-          <p>Virtual Poster Session #1 (2-3pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_30.pdf" target="_blank">Global-Local Network for Learning Depth Via Interaction</a></b> (Spotlight)</p>
-          <p>Antonio Loquercio, Alexey Dosovitskiy, and Davide Scaramuzza</p>
-          <p>Virtual Poster Session #1 (2-3pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_2.pdf" target="_blank">Product Kanerva Machines: Factorized Bayesian Memory</a></b> (Spotlight)</p>
-          <p>Adam Marblestone, Yan Wu, and Greg Wayne</p>
-          <p>Virtual Poster Session #2 (9-10pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_23.pdf" target="_blank">Analyzing acoustic word embeddings</a></b> (Spotlight)</p>
-          <p>Yevgen Matusevych, Herman Kamper, and Sharon Goldwater</p>
-          <p>Virtual Poster Session #1 (2-3pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_28.pdf" target="_blank">Theory of Mind with Guilt Aversion Facilitates Cooperative Reinforcement Learning</a></b> (Spotlight)</p>
-          <p>Dung Nguyen, Svetha Venkatesh, and Truyen Tran</p>
-          <p>Virtual Poster Session #2 (9-10pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_4.pdf" target="_blank">Relaxed Graph Matching for Analogical Reasoning</a></b> (Spotlight)</p>
-          <p>Simon Segert, Mariano Tepper, Javier S Turek, and Jonathan Cohen</p>
-          <p>Virtual Poster Session #2 (9-10pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_26.pdf" target="_blank">Coarse-to-Fine Curriculum Learning for Classification</a></b> (Spotlight)</p>
-          <p>Otilia Stretcu, Anthony Platanios, Tom Mitchell, and Barnabas Poczos</p>
-          <p>Virtual Poster Session #1 (2-3pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_37.pdf" target="_blank">Reinforcement Learning through Active Inference</a></b> (Spotlight)</p>
-          <p>Alexander D Tschanz, Beren Millidge, Anil Seth, and Christopher Buckley</p>
-          <p>Virtual Poster Session #1 (2-3pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_15.pdf" target="_blank">Can neural network language models understand spatial perspective?</a></b> </p>
-          <p>Carolyn J Anderson and Tessa Patapoutian</p>
-          <p>Virtual Poster Session #1 (2-3pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_32.pdf" target="_blank">Causal Learning by a Robot with Semantic-Episodic Memory in an Aesop's Fable Experiment</a></b> </p>
-          <p>Ajaz A Bhat</p>
-          <p>Virtual Poster Session #2 (9-10pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_14.pdf" target="_blank">The perceptual boost of visual attention is task-dependent in naturalistic settings</a></b> </p>
-          <p>Freddie Bickford Smith, Xiaoliang Luo, Brett Roads, and Bradley Love</p>
-          <p>Virtual Poster Session #2 (9-10pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_12.pdf" target="_blank">Curiosity Increases Equality in Competitive Resource Allocation</a></b> </p>
-          <p>Bernadette K Bucher, Siddharth Singh, Clelia de Mulatier, Kostas Daniilidis, and Vijay Balasubramanian</p>
-          <p>Virtual Poster Session #2 (9-10pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_7.pdf" target="_blank">Deep Active Inference for Autonomous Robot Navigation</a></b> </p>
-          <p>Ozan Catal, Tim Verbelen, Cedric De Boom, Bart Dhoedt, and Samuel T Wauthier</p>
-          <p>Virtual Poster Session #1 (2-3pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_34.pdf" target="_blank">Toward A Neuro-Inspired Creative Decoder</a></b> </p>
-          <p>Payel Das, Brian Quanz, Pin-Yu Chen, Jae-wook Ahn, and Dhruv Shah</p>
-          <p>Virtual Poster Session #2 (9-10pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_41.pdf" target="_blank">Toward Human-like Object Naming in Artificial Neural Systems</a></b> </p>
-          <p>Tiwalayo Eisape, Noga Zaslavsky, Roger Levy, and Joshua Tenenbaum</p>
-          <p>Virtual Poster Session #2 (9-10pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_3.pdf" target="_blank">Learning robust visual representations using data augmentation invariance</a></b> </p>
-          <p>Alex Hernández-García, Peter König, and Tim C. Kietzmann</p>
-          <p>Virtual Poster Session #2 (9-10pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_19.pdf" target="_blank">What does a pruned deep neural network "forget"?</a></b> </p>
-          <p>Sara Hooker, Aaron Courville, Andrea Frome, and Yann Dauphin</p>
-          <p>Virtual Poster Session #2 (9-10pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_11.pdf" target="_blank">On Systematic Generalization of Sequence to Sequence Models</a></b> </p>
-          <p>Prabhu Prakash Kagitha</p>
-          <p>Virtual Poster Session #1 (2-3pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_16.pdf" target="_blank">Active World Model Learning in Agent-rich Environments with Progress Curiosity</a></b> </p>
-          <p>Kun Ho Kim, Megumi Sano, Julian De Freitas, Nick Haber, and Daniel Yamins</p>
-          <p>Virtual Poster Session #2 (9-10pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_38.pdf" target="_blank">Towards Curiosity-Driven Learning of Physical Dynamics</a></b> </p>
-          <p>Michael Lingelbach, Damian Mrowca, Nick Haber, Li Fei-Fei, and Daniel Yamins</p>
-          <p>Virtual Poster Session #1 (2-3pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_42.pdf" target="_blank">Weakly-Supervised Trajectory Segmentation for Learning Reusable Skills</a></b> </p>
-          <p>Parsa Mahmoudieh, Trevor Darrell, and Deepak Pathak</p>
-          <p>Virtual Poster Session #1 (2-3pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b>CognitiveCNN: Mimicking Human Cognitive Models to resolve Texture-Shape Bias</b> </p>
-          <p>Satyam Mohla, Anshul Nasery, Biplab Banerjee, and Subhasis Chaudhuri</p>
-          <p>Virtual Poster Session #1 (2-3pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_9.pdf" target="_blank">Learning Hierarchical Syntactic Transformations with Encoder-Decoder Networks</a></b> </p>
-          <p>Max A Nelson</p>
-          <p>Virtual Poster Session #1 (2-3pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_35.pdf" target="_blank">Learning Intuitive Physics Through Objects</a></b> </p>
-          <p>Luis S Piloto, Ari Weinstein, Peter Battaglia, and Matthew Botvinick</p>
-          <p>Virtual Poster Session #1 (2-3pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_18.pdf" target="_blank">Attention Driven Dynamic Memory Maps</a></b> </p>
-          <p>Himanshu Sahni, Shray Bansal, and Charles Isbell</p>
-          <p>Virtual Poster Session #2 (9-10pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_17.pdf" target="_blank">Modeling Conversation Context by Adapting Cognitive Architectures</a></b> </p>
-          <p>Sashank Santhanam and Samira Shaikh</p>
-          <p>Virtual Poster Session #2 (9-10pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_29.pdf" target="_blank">Simulated sleep helps to generalize knowledge in a spiking network trained with spike-timing dependent plasticity</a></b> </p>
-          <p>Timothy Tadros, Giri Krishnan, and Maxim Bazhenov</p>
-          <p>Virtual Poster Session #2 (9-10pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_13.pdf" target="_blank">Convolutional Neural Networks as a Model of Visual Activity in The Brain: Greater Contribution of Architecture Than Learned Weights</a></b> </p>
-          <p>Anna Truzzi and Rhodri Cusack</p>
-          <p>Virtual Poster Session #1 (2-3pm GMT)</p>
-          </td></tr>
-      
-          <tr><td>
-          <p><b><a href="papers/BAICS_21.pdf" target="_blank">A Neuro-AI Interface for Evaluating Generative Adversarial Networks</a></b> </p>
-          <p>Zhengwei Wang, Qi She, Alan Smeaton, Tomas Ward, and Graham Healy</p>
-          <p>Virtual Poster Session #1 (2-3pm GMT)</p>
-          </td></tr>
-      </table>
-        </div>
-      </div>
-
-      <div class="row" id="sponsors">
-        <h2>Sponsors</h2>
-        <div>
-        <p>
-          <a href="http://research.fb.com"><img src="images/facebook.png" height="80px"/></a>
-          <a href="http://deepmind.com"><img src="images/deepmind.png" height="80px"/></a>
-          <a href="https://cbmm.mit.edu/"><img src="images/cbmm.png" height="100px"/></a>
-        </p>
-        <p>Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.</p>
-        </div>
-
-      </div> <!-- sponsors -->
-
-      <div class="row" id="organizers">
-
-        <h2>Organizers</h2>
-        <p>
-        <ul>
-          <li><b><a href="http://www.jesshamrick.com/">Jessica Hamrick</a></b> (DeepMind)</li>
-          <li><b><a href="http://www.aidanematzadeh.me/">Aida Nematzadeh</a></b> (DeepMind)</li>
-          <li><b><a href="https://kayburns.github.io/">Kaylee Burns</a></b> (Stanford University)</li>
-          <li><b><a href="http://www.lscp.net/persons/dupoux/">Emmanuel Dupoux</a></b> (&Eacute;cole des Hautes Etudes en Sciences Sociales)</li>
-          <li><b><a href="http://alisongopnik.com/">Alison Gopnik</a></b> (UC Berkeley)</li>
-          <li><b><a href="http://web.mit.edu/cocosci/josh.html">Josh Tenenbaum</a></b> (MIT)</li>
-        </ul>
-        </p>
-
-      </div> <!-- organizers -->
-
-      <div class="row" id="pc">
-        <h2>Program Committee</h2>
-        <table>
-          <tr>
-          <td>Adam Marblestone</td>
-          <td>Aishwarya Agrawal</td>
-          <td>Andrea Banino</td>
-          </tr>
-          <tr>
-          <td>Andrew Jaegle</td>
-          <td><a href="http://anselmrothe.github.io">Anselm Rothe</a></td>
-          <td>Ari Holtzman</td>
-          </tr>
-          <tr>
-          <td>Bas van Opheusden</td>
-          <td>Ben Peloquin</td>
-          <td>Bill Thompson</td>
-          </tr>
-          <tr>
-          <td>Charlie Nash</td>
-          <td>Danfei Xu</td>
-          <td>Emin Orhan</td>
-          </tr>
-          <tr>
-          <td><a href="http://stanford.edu/~ebiyik">Erdem Biyik</a></td>
-          <td>Erin Grant</td>
-          <td>Jon Gauthier</td>
-          </tr>
-          <tr>
-          <td>Josh Merel</td>
-          <td><a href="https://twitter.com/joshuacpeterson">Joshua Peterson</a></td>
-          <td>Kelsey Allen</td>
-          </tr>
-          <tr>
-          <td>Kevin Ellis</td>
-          <td>Kevin McKee</td>
-          <td>Kevin Smith</td>
-          </tr>
-          <tr>
-          <td>Leila Wehbe</td>
-          <td><a href="https://people.eecs.berkeley.edu/~lisa_anne/
+  <tr>
+  <td>Adam Marblestone</td>
+  <td>Aishwarya Agrawal</td>
+  <td>Andrea Banino</td>
+  </tr>
+  <tr>
+  <td>Andrew Jaegle</td>
+  <td><a href="http://anselmrothe.github.io">Anselm Rothe</a></td>
+  <td>Ari Holtzman</td>
+  </tr>
+  <tr>
+  <td>Bas van Opheusden</td>
+  <td>Ben Peloquin</td>
+  <td>Bill Thompson</td>
+  </tr>
+  <tr>
+  <td>Charlie Nash</td>
+  <td>Danfei Xu</td>
+  <td>Emin Orhan</td>
+  </tr>
+  <tr>
+  <td><a href="http://stanford.edu/~ebiyik">Erdem Biyik</a></td>
+  <td>Erin Grant</td>
+  <td>Jon Gauthier</td>
+  </tr>
+  <tr>
+  <td>Josh Merel</td>
+  <td><a href="https://twitter.com/joshuacpeterson">Joshua Peterson</a></td>
+  <td>Kelsey Allen</td>
+  </tr>
+  <tr>
+  <td>Kevin Ellis</td>
+  <td>Kevin McKee</td>
+  <td>Kevin Smith</td>
+  </tr>
+  <tr>
+  <td>Leila Wehbe</td>
+  <td><a href="https://people.eecs.berkeley.edu/~lisa_anne/
 ">Lisa Anne Hendricks</a></td>
-          <td>Luis Piloto</td>
-          </tr>
-          <tr>
-          <td>Mark Ho</td>
-          <td><a href="https://www.people.hps.cam.ac.uk/index/teaching-officers/halina">Marta Halina</a></td>
-          <td>Marta Kryven</td>
-          </tr>
-          <tr>
-          <td>Matthew Overlan</td>
-          <td>Max Kleiman-Weiner</td>
-          <td><a href="http://maxwellforbes.com">Maxwell Forbes</a></td>
-          </tr>
-          <tr>
-          <td>Maxwell Nye</td>
-          <td><a href="http://mbchang.github.io/">Michael Chang</a></td>
-          <td>Minae Kwon</td>
-          </tr>
-          <tr>
-          <td>Pedro Tsividis</td>
-          <td>Peter Battaglia</td>
-          <td><a href="https://qiongzhang.github.io">Qiong Zhang</a></td>
-          </tr>
-          <tr>
-          <td>Raphael Koster</td>
-          <td>Richard Futrell</td>
-          <td><a href="https://rxdhawkins.com">Robert Hawkins</a></td>
-          </tr>
-          <tr>
-          <td>Sandy Huang</td>
-          <td>Stephan Meylan</td>
-          <td>Suraj Nair</td>
-          </tr>
-          <tr>
-          <td>Tal Linzen</td>
-          <td>Tina Zhu</td>
-          <td><a href="https://www.waikeenvong.com/">Wai Keen Vong</a></td>
-          </tr>
-        </table>
-      </div> <!-- program committee -->
+  <td>Luis Piloto</td>
+  </tr>
+  <tr>
+  <td>Mark Ho</td>
+  <td><a href="https://www.people.hps.cam.ac.uk/index/teaching-officers/halina">Marta Halina</a></td>
+  <td>Marta Kryven</td>
+  </tr>
+  <tr>
+  <td>Matthew Overlan</td>
+  <td>Max Kleiman-Weiner</td>
+  <td><a href="http://maxwellforbes.com">Maxwell Forbes</a></td>
+  </tr>
+  <tr>
+  <td>Maxwell Nye</td>
+  <td><a href="http://mbchang.github.io/">Michael Chang</a></td>
+  <td>Minae Kwon</td>
+  </tr>
+  <tr>
+  <td>Pedro Tsividis</td>
+  <td>Peter Battaglia</td>
+  <td><a href="https://qiongzhang.github.io">Qiong Zhang</a></td>
+  </tr>
+  <tr>
+  <td>Raphael Koster</td>
+  <td>Richard Futrell</td>
+  <td><a href="https://rxdhawkins.com">Robert Hawkins</a></td>
+  </tr>
+  <tr>
+  <td>Sandy Huang</td>
+  <td>Stephan Meylan</td>
+  <td>Suraj Nair</td>
+  </tr>
+  <tr>
+  <td>Tal Linzen</td>
+  <td>Tina Zhu</td>
+  <td><a href="https://www.waikeenvong.com/">Wai Keen Vong</a></td>
+  </tr>
+</table>
+</div>
 
-
-      <div class="row" id="references">
-        <h3>References</h3>
-        <p>
-        <ul>
-          <li> Anderson, J. R. (1975). Computer simulation of a language acquisition system: A first report. In R. Solso (Ed.). Information processing and cognition. Hillsdale, N.J.: Lawrence Erlbaum.</li>
-          <li> Banino, A., Barry, C., Uria, B., Blundell, C., Lillicrap, T., Mirowski, P., ... & Wayne, G. (2018). Vector-based navigation using grid-like representations in artificial agents. Nature, 557(7705), 429. </li>
-          <li> Bourgin, D., Peterson, J., Reichman, D., Griffiths, T., & Russell, S. (2019). Cognitive model priors for predicting human decisions. In International Conference on Machine Learning (pp. 5133-5141).</li>
-          <li> Dupoux, E. (2018). Cognitive science in the era of artificial intelligence: A roadmap for reverse-engineering the infant language-learner. Cognition, 173, 43-59. </li>
-          <li> Elman, J. L. (1990). Finding structure in time. Cognitive science, 14(2), 179-211. </li>
-          <li> Fan, J. E., Yamins, D. L., & Turk‐Browne, N. B. (2018). Common object representations for visual production and recognition. Cognitive science, 42(8), 2670-2698.</li>
-          <li> Gopnik, A. (2017). Making AI more human. Scientific American, 316(6), 60-65. </li>
-          <li> Hassabis, D., Kumaran, D., Summerfield, C., & Botvinick, M. (2017). Neuroscience-inspired artificial intelligence. Neuron, 95(2), 245-258.</li>
-          <li> Hamrick, J. (2019). Analogues of mental simulation and imagination in deep learning. Current Opinion in Behavioral Sciences, 29, 8-16 </li>
-          <li> Lake, B. M., Ullman, T. D., Tenenbaum, J. B., & Gershman, S. J. (2017). Building machines that learn and think like people. Behavioral and Brain Sciences, 40.</li>
-          <li> Lieder, F., & Griffiths, T. L. (2017). Strategy selection as rational metareasoning. Psychological Review, 124(6), 762-794. </li>
-          <li> Linzen, T., Dupoux, E., & Goldberg, Y. (2016). Assessing the ability of LSTMs to learn syntax-sensitive dependencies. Transactions of the Association for Computational Linguistics, 4, 521-535.</li>
-          <li> Nematzadeh, A., Burns, K., Grant, E., Gopnik, A., & Griffiths, T. (2018). Evaluating theory of mind in question answering. EMNLP. </li>
-          <li> Peterson, J., Battleday, R., Griffiths, T. L., & Russakovsky, O. (2019). Human uncertainty makes classification more robust. Proceedings of the IEEE International Conference on Computer Vision. </li>
-          <li> Rumelhart, D. E., McClelland, J. L., & PDP Research Group. (1986). Parallel distributed processing.</li>
-          <li> Tenenbaum, J. B., Griffiths, T. L., & Kemp, C. (2006). Theory-based Bayesian models of inductive learning and reasoning. Trends in cognitive sciences, 10(7), 309-318.</li>
-          <li> Yamins, D. L., & DiCarlo, J. J. (2016). Using goal-driven deep learning models to understand sensory cortex. Nature neuroscience, 19(3), 356.</li>
-        </ul>
-        </p>
-      </div> <!-- references -->
-
-      <div class="row" id="call-for-papers">
-
-        <h2>Call for Papers</h2>
-        <p>We are sourcing short, four-page papers from cognitive science,
-        neuroscience, and AI across two tracks. </p>
-
-        <p> The <b>Research track</b> will highlight advances at the
-        intersection of AI, cognitive science, and neuroscience. We
-        welcome submissions on: </p>
-
-        <p>
-        <ul>
-          <li>AI systems which draw inspiration from natural intelligence,</li>
-          <li>Computational models of natural intelligence that leverage methods from AI,</li>
-          <li>Demonstrations of failure cases of AI systems where humans or animals succeed,</li>
-          <li>Datasets or environments for AI systems which target a particular aspect of natural intelligence,</li>
-          <li>Papers which address privacy and fairness in machine learning, using insights from the   behavioral sciences, or </li>
-          <li>Works which otherwise combine AI and cognitive science.</li>
-        </ul>
-        </p>
-
-        <p> The <b>Blue Sky Ideas track</b> will showcase longer-term ideas or positions on ways to connect AI with cognitive science. While we will not require such ideas to be fully instantiated in a working system, we do expect them to be grounded in empirical or computational evidence. We welcome submissions on: </p>
-
-        <p>
-        <ul>
-          <li>Aspects of cognition which are under-explored in AI,</li>
-          <li>The order in which the research community should solve cognitive tasks in AI,</li>
-          <li>How research in AI could inform research in cognitive science,</li>
-          <li>Survey papers which summarize one area of research in AI or cognitive science for researchers in the other field, or</li>
-          <li>Works which otherwise propose a longer-term idea or position about the intersection of cognitive science and AI.</li>
-        </ul>
-        </p>
-
-        <p><b>We particularly encourage submissions from students from groups that are underrepresented at machine learning conferences</b>, including: gender, gender identity, sexual orientation, race, ethnicity, nationality, disability, and institution. We are pleased to be able to offer a limited number of travel grants to student presenters from these groups; if you would like to apply for financial assistance, please indicate this when submitting your paper.</p>
-
-        <p> Submission Policy: </p>
-        <p>
-        <ul>
-          <li> Submissions should be a maximum of four pages, plus any number of pages for references and supplementary material. We ask authors to use the supplementary material only for minor details that do not fit in the main paper. </li>
-          <li> Papers should be fully anonymized for double-blind review. </li>
-          <li>Papers should use the <a href='https://github.com/ICLR/Master-Template/blob/master/archive/iclr2020.zip'>ICLR style file</a>.</li>
-          <li> Dual submission policy: we welcome submissions that have been published or are currently under review at other venues, including both full conference papers and workshops. However, all submissions should be shortened to four pages. </li>
-          <li>Evaluation criteria: Papers will be reviewed for topicality, clarity, correctness, and novelty; however, we welcome submissions which are still work-in-progress. Papers which are longer than four pages, clearly off-topic, or not anonymized will be rejected without review.</li>
-          <li>Submission site: <a href="https://cmt3.research.microsoft.com/BAICS2020/">https://cmt3.research.microsoft.com/BAICS2020/</a></li>
-        </ul>
-        </p>
-  
-      </div> <!-- call-for-papers -->
-
-      <div class="row" id="important-dates">
-
-        <h2>Important Dates and Links</h2>
-
-        <p>
-        <table class="table table-striped">
-          <tbody>
-            <tr>
-              <td>Submission site opens</td>
-              <td>January 3, 2020</td>
-            </tr>
-            <tr>
-              <td>Submission site</td>
-              <td><a href="https://cmt3.research.microsoft.com/BAICS2020/">https://cmt3.research.microsoft.com/BAICS2020/</a></td>
-            </tr>
-            <tr>
-              <td>Submission deadline</td>
-              <td><strike>February 5, 2020, 6pm Pacific</strike><br /><strike>February 11, 2020, 6pm Pacific</strike></td>
-            </tr>
-            <tr>
-              <td>Reviewing starts</td>
-              <td><strike>February 14, 2020, 6pm Pacific</strike></td>
-            </tr>
-            <tr>
-              <td>Reviews due</td>
-              <td><strike>February 21, 2020, 6pm Pacific</strike></td> 
-            </tr>
-            <tr>
-              <td>Decisions announced</td>
-              <td><strike>February 25, 2020, 6pm Pacific</strike></td>
-            </tr>
-            <tr>
-              <td>Camera-ready due</td>
-              <td>April 3, 2020, 6pm Pacific</td>
-            </tr>
-            <tr>
-              <td>Day of workshop</td>
-              <td>April 26, 2020</td>
-            </tr>
-          </tbody>
-        </table>
-        </p>
-
-      </div> <!-- important-dates -->
-
-    </div> <!-- container -->
-
-  </div> <!-- page-content -->
-
-</body>
-</html>
+<div id="references" class="row">
+<h2>References</h2>
+<ul>
+  <li> Anderson, J. R. (1975). Computer simulation of a language acquisition system: A first report. In R. Solso (Ed.). Information processing and cognition. Hillsdale, N.J.: Lawrence Erlbaum.</li>
+  <li> Banino, A., Barry, C., Uria, B., Blundell, C., Lillicrap, T., Mirowski, P., ... & Wayne, G. (2018). Vector-based navigation using grid-like representations in artificial agents. Nature, 557(7705), 429. </li>
+  <li> Bourgin, D., Peterson, J., Reichman, D., Griffiths, T., & Russell, S. (2019). Cognitive model priors for predicting human decisions. In International Conference on Machine Learning (pp. 5133-5141).</li>
+  <li> Dupoux, E. (2018). Cognitive science in the era of artificial intelligence: A roadmap for reverse-engineering the infant language-learner. Cognition, 173, 43-59. </li>
+  <li> Elman, J. L. (1990). Finding structure in time. Cognitive science, 14(2), 179-211. </li>
+  <li> Fan, J. E., Yamins, D. L., & Turk‐Browne, N. B. (2018). Common object representations for visual production and recognition. Cognitive science, 42(8), 2670-2698.</li>
+  <li> Gopnik, A. (2017). Making AI more human. Scientific American, 316(6), 60-65. </li>
+  <li> Hassabis, D., Kumaran, D., Summerfield, C., & Botvinick, M. (2017). Neuroscience-inspired artificial intelligence. Neuron, 95(2), 245-258.</li>
+  <li> Hamrick, J. (2019). Analogues of mental simulation and imagination in deep learning. Current Opinion in Behavioral Sciences, 29, 8-16 </li>
+  <li> Lake, B. M., Ullman, T. D., Tenenbaum, J. B., & Gershman, S. J. (2017). Building machines that learn and think like people. Behavioral and Brain Sciences, 40.</li>
+  <li> Lieder, F., & Griffiths, T. L. (2017). Strategy selection as rational metareasoning. Psychological Review, 124(6), 762-794. </li>
+  <li> Linzen, T., Dupoux, E., & Goldberg, Y. (2016). Assessing the ability of LSTMs to learn syntax-sensitive dependencies. Transactions of the Association for Computational Linguistics, 4, 521-535.</li>
+  <li> Nematzadeh, A., Burns, K., Grant, E., Gopnik, A., & Griffiths, T. (2018). Evaluating theory of mind in question answering. EMNLP. </li>
+  <li> Peterson, J., Battleday, R., Griffiths, T. L., & Russakovsky, O. (2019). Human uncertainty makes classification more robust. Proceedings of the IEEE International Conference on Computer Vision. </li>
+  <li> Rumelhart, D. E., McClelland, J. L., & PDP Research Group. (1986). Parallel distributed processing.</li>
+  <li> Tenenbaum, J. B., Griffiths, T. L., & Kemp, C. (2006). Theory-based Bayesian models of inductive learning and reasoning. Trends in cognitive sciences, 10(7), 309-318.</li>
+  <li> Yamins, D. L., & DiCarlo, J. J. (2016). Using goal-driven deep learning models to understand sensory cortex. Nature neuroscience, 19(3), 356.</li>
+</ul>
+</div>
