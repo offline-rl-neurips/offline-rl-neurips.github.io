@@ -17,6 +17,7 @@ session_id: {session_id}
 session_title: "{session_title}"
 title: "{title}"
 track: {track}
+live: {live}
 ---
 """.strip()
 
@@ -40,6 +41,7 @@ for session in sessions:
 			paper["rocket_id"] = "baics_channel_{:02d}".format(paper["id"])
 		else:
 			paper["rocket_id"] = "baics_channel_{}".format(paper["id"])
+		paper["live"] = "false"
 
 		html = template.format(**paper)
 
@@ -61,6 +63,7 @@ for speaker in speakers:
 	speaker["cmt_id"] = -1
 	speaker["track"] = speaker["kind"]
 	speaker["rocket_id"] = "baics_channel_{:02d}".format(speaker["id"])
+	speaker["live"] = str(speaker.get("live", False)).lower()
 
 	html = template.format(**speaker)
 

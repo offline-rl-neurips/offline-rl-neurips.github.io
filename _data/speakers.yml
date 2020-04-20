@@ -14,6 +14,11 @@
   id: 44
   kind: invited
   title: Representation Learning in the Hippocampal-Entorhinal circuit
+- authors: Laura Schulz
+  id: 43
+  kind: invited
+  title: "Not playing by the rules: Play, problems, and human cognition"
+  live: true
 - authors: Jessica Hamrick, Kaylee Burns, and Aida Nematzadeh
   id: 49
   kind: opening

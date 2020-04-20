@@ -53,7 +53,7 @@ session_2: false
 
 <div class="row justify-content-center">
   <div class="col">
-		{% if layout.video %}
+	{% if layout.video and page.live != true %}
     <div id="presentation-embed-{{ page.slides_live_id }}" class="slp"></div>
     <script src='https://slideslive.com/embed_presentation.js'></script>
     <script>
@@ -66,18 +66,20 @@ session_2: false
       hideTitle: true,
       });
     </script>
+    {% elsif page.live %}
+    <div class="text-center"><i>Please note that this talk is NOT pre-recorded and will be streamed live.</i></div>
     {% else %}
     <div class="text-center"><i>Video coming soon!</i></div>
-	  {% endif %}
+	{% endif %}
   </div>
   
   <div class="col">
-	  {% if layout.chat %}
+	{% if layout.chat %}
     <div class="rocket">
       <iframe frameborder="0" src="https://iclr.rocket.chat/channel/{{ page.rocket_id }}?layout=embedded" width="100%" height="680px"></iframe>
     </div>
     {% else %}
     <div class="text-center"><i>Chat coming soon!</i></div>
-	  {% endif %}
+	{% endif %}
   </div>
 </div>
