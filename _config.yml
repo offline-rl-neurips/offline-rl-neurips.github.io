@@ -5,3 +5,10 @@ highlighter: rouge
 kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
+exclude:
+  - secret.py
+  - zoom.py
+  - make_program.py
+  - zoom_data
+  - vendor
+  - Gemfile

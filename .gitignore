@@ -4,3 +4,7 @@ _site
 vendor
 .bundle
 Gemfile.lock
+__pycache__
+zoom_data
+secret.py
+zoom.py
