@@ -52,10 +52,7 @@ for session in sessions:
 		paper["session_id"] = session["id"]
 		paper["session_title"] = session["title"]
 		paper["title"] = paper["title"].replace("\"", "\\\"")
-		if paper["id"] > 0:
-			paper["rocket_id"] = "baics_channel_{:02d}".format(paper["id"])
-		else:
-			paper["rocket_id"] = "baics_channel_{}".format(paper["id"])
+		paper["rocket_id"] = "baics_channel_{:02d}".format(paper["id"])
 		paper["live"] = "false"
 
 		html = template.format(**paper)
