@@ -9,6 +9,7 @@ exclude:
   - secret.py
   - zoom.py
   - make_program.py
+  - send_emails.py
   - zoom_data
   - vendor
   - Gemfile
