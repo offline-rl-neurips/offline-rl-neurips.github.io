@@ -351,7 +351,7 @@
     title: Simulated sleep helps to generalize knowledge in a spiking network trained
       with spike-timing dependent plasticity
     track: research
-  - authors: Tiwalayo Eisape, Noga Zaslavsky, Roger Levy, and Joshua Tenenbaum
+  - authors: Tiwalayo Eisape, Roger Levy, Joshua B. Tenenbaum, and Noga Zaslavsky
     camera_ready: true
     cmt_id: 61
     id: 41
