@@ -45,6 +45,47 @@ def load_presentation_data():
     return data
 
 
+def load_meet_and_greet_data():
+    data = pd.read_csv("scripts/data/meet_and_greet.csv")
+    data.index.name = "unique_id"
+    data = data.reset_index()
+    data = data.fillna("")
+    data["names"] = ""
+    data["emails"] = ""
+    data = data.rename(columns={"timeslot": "session"})
+    data["session_title"] = data["session"].replace({
+        "1-1:30 PM": "1-1:30pm GMT",
+        "8-8:30 PM": "8-8:30pm GMT"
+    })
+    data["session"] = data["session"].replace({
+        "1-1:30 PM": 1,
+        "8-8:30 PM": 2
+    })
+
+    def _get_names(meeting):
+        cols = sorted([x for x in meeting.index if x.startswith("name_")])
+        names = [meeting[x] for x in cols]
+        names = [x for x in names if x]
+        if len(names) == 2:
+            names = "{} and {}".format(*names)
+        else:
+            names = ", ".join(names[:-1]) + ", and " + names[-1]
+        return names
+
+    def _get_emails(meeting):
+        cols = sorted([x for x in meeting.index if x.startswith("email_")])
+        emails = [meeting[x] for x in cols]
+        emails = [x for x in emails if x]
+        return ", ".join(emails)
+
+    for i, row in data.iterrows():
+        data.loc[i, "names"] = _get_names(row)
+        data.loc[i, "emails"] = _get_emails(row)
+
+    return data
+
+
+
 def meeting_json_exists(name):
     path = os.path.join("scripts/data/meetings", "{}.json".format(name))
     return os.path.exists(path)

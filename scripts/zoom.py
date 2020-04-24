@@ -54,10 +54,13 @@ import jsondiff
 import time
 import yaml
 import re
+import random
+import hashlib
 from textwrap import dedent
 
-from secret import TOKEN, USER_EMAIL_TEMPLATE, PASSWORD
+from secret import TOKEN, USER_EMAIL_TEMPLATE, PASSWORD, SALT
 from utils import meeting_json_exists, save_meeting_json, read_meeting_json
+from utils import load_meet_and_greet_data
 
 
 def _get(endpoint, params=None):
@@ -229,5 +232,40 @@ def create_poster_sessions():
 			time.sleep(1)  # to prevent ratelimiting
 
 
+def random_password(title, length=10):
+	# Convert the title into a seed.
+	m = hashlib.sha256()
+	m.update((title + SALT).encode())
+	seed = int(m.hexdigest(), base=16)
+
+	# Randomly sample characters for the password.
+	choices = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+	random.seed(seed)
+	return "".join(random.choices(choices, k=length))
+
+
+def create_meet_and_greets():
+	# These are in GMT.
+	session_times = {
+		1: "2020-04-26T13:00:00Z",
+		2: "2020-04-26T20:00:00Z",
+	}
+
+	data = load_meet_and_greet_data()
+	for session_id, df in data.groupby("session"):
+		for i, meeting in enumerate(df.to_dict(orient="records")):
+			title = "BAICS Meet-and-Greet: {}".format(meeting["names"])
+			create_or_update_meeting(
+				unique_id="meet_and_greet_{}".format(meeting["unique_id"]),
+				user_email=USER_EMAIL_TEMPLATE.format(i),
+				topic=title,
+				start_time=session_times[session_id],
+				password=random_password(title),
+				duration=30,  # minutes
+				waiting_room=False)
+			time.sleep(1)  # to prevent ratelimiting
+
+
 if __name__ == "__main__":
-	create_poster_sessions()
+	#create_poster_sessions()
+	create_meet_and_greets()
