@@ -6,4 +6,5 @@ vendor
 Gemfile.lock
 __pycache__
 scripts/data
+scripts/templates
 scripts/secret.py
