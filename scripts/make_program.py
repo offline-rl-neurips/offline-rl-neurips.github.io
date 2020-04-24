@@ -97,11 +97,13 @@ def make_program():
 
         data["camera_ready"] = str(data["camera_ready"]).lower()
         data["title"] = data["title"].replace("\"", "\\\"")
-        data["rocket_id"] = "baics_channel_{:02d}".format(data["unique_id"])
         data["live"] = str(data["live"]).lower()
 
-        html = TEMPLATE.format(**data)
+        data["rocket_id"] = "baics_channel_{:02d}".format(data["unique_id"])
+        if data["kind"] == "opening":
+            data["rocket_id"] = "workshop_BAICS"
 
+        html = TEMPLATE.format(**data)
         path = "program/baics_{}.html".format(data["unique_id"])
         assert not os.path.exists(path)
         with open(path, "w") as fh:
