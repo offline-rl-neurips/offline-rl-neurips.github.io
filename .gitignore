@@ -5,7 +5,5 @@ vendor
 .bundle
 Gemfile.lock
 __pycache__
-zoom_data
-secret.py
-zoom.py
-send_emails.py
+scripts/data
+scripts/secret.py

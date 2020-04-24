@@ -1,7 +1,11 @@
-- authors: Judy Fan
-  id: 47
+- authors: Laura Schulz
+  id: 43
   kind: invited
-  title: Cognitive technologies for making the invisible visible
+  title: 'Not playing by the rules: Play, problems, and human cognition'
+- authors: Kim Stachenfeld
+  id: 44
+  kind: invited
+  title: Representation Learning in the Hippocampal-Entorhinal circuit
 - authors: Leslie Kaelbling
   id: 45
   kind: invited
@@ -10,15 +14,10 @@
   id: 46
   kind: invited
   title: Autism-Inspired AI for Visuospatial and Social Reasoning
-- authors: Kim Stachenfeld
-  id: 44
+- authors: Judy Fan
+  id: 47
   kind: invited
-  title: Representation Learning in the Hippocampal-Entorhinal circuit
-- authors: Laura Schulz
-  id: 43
-  kind: invited
-  title: "Not playing by the rules: Play, problems, and human cognition"
-  live: true
+  title: Cognitive technologies for making the invisible visible
 - authors: Jessica Hamrick, Kaylee Burns, and Aida Nematzadeh
   id: 49
   kind: opening
