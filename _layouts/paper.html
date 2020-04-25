@@ -40,9 +40,13 @@ session_2: false
 		{% if page.session_id == 1 and layout.session_1 and page.meeting_url %}
 		<span> · </span>
 		<span><a href="{{ page.meeting_url }}" target="_blank">Join Meeting Room</a></span>
+		<span> · </span>
+		<span><a href="https://iclr.cc/virtual/workshops_4.html">Password</a></span>
 		{% elsif page.session_id == 2 and layout.session_2 and page.meeting_url %}
 		<span> · </span>
 		<span><a href="{{ page.meeting_url }}" target="_blank">Join Meeting Room</a></span>
+		<span> · </span>
+		<span><a href="https://iclr.cc/virtual/workshops_4.html">Password</a></span>
 		{% endif %}
 		</li>
 		{% endif %}
