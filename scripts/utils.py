@@ -46,22 +46,6 @@ def load_presentation_data():
 
 
 def load_meet_and_greet_data():
-    data = pd.read_csv("scripts/data/meet_and_greet.csv")
-    data.index.name = "unique_id"
-    data = data.reset_index()
-    data = data.fillna("")
-    data["names"] = ""
-    data["emails"] = ""
-    data = data.rename(columns={"timeslot": "session"})
-    data["session_title"] = data["session"].replace({
-        "1-1:30 PM": "1-1:30pm GMT",
-        "8-8:30 PM": "8-8:30pm GMT"
-    })
-    data["session"] = data["session"].replace({
-        "1-1:30 PM": 1,
-        "8-8:30 PM": 2
-    })
-
     def _get_names(meeting):
         cols = sorted([x for x in meeting.index if x.startswith("name_")])
         names = [meeting[x] for x in cols]
@@ -78,9 +62,41 @@ def load_meet_and_greet_data():
         emails = [x for x in emails if x]
         return ", ".join(emails)
 
+    data = pd.read_csv("scripts/data/meet_and_greet.csv")
+    data.index.name = "unique_id"
+    data = data.reset_index()
+    data = data.fillna("")
+    data["names"] = ""
+    data["emails"] = ""
+    data = data.rename(columns={"timeslot": "session"})
+    data["session_title"] = data["session"].replace({
+        "1-1:30 PM": "1-1:30pm GMT",
+        "8-8:30 PM": "8-8:30pm GMT"
+    })
+    data["session"] = data["session"].replace({
+        "1-1:30 PM": 1,
+        "8-8:30 PM": 2
+    })
+
+    detail_keys = ["institution", "academic_status", "google_scholar", "website"]
+    for key in detail_keys:
+        for j in [1, 2, 3, 4]:
+            data["{}_{}".format(key, j)] = ""
+
+    all_details = pd.read_csv("scripts/data/meet_and_greet_details.csv")
+    all_details = all_details.set_index("email")
+    all_details = all_details.fillna("")
+
     for i, row in data.iterrows():
         data.loc[i, "names"] = _get_names(row)
         data.loc[i, "emails"] = _get_emails(row)
+        for j in [1, 2, 3, 4]:
+            email = row["email_{}".format(j)]
+            if not email:
+                continue
+            details = all_details.loc[email]
+            for key in detail_keys:
+                data.loc[i, "{}_{}".format(key, j)] = details[key]
 
     return data
 
