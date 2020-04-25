@@ -104,8 +104,8 @@ def send_meet_and_greet_emails():
     context = ssl.create_default_context()
     with smtplib.SMTP_SSL(SMTP_SERVER, PORT, context=context) as server:
         server.login(SENDER_EMAIL, SENDER_PASSWORD)
-        for meeting in meetings:
-            print("{}".format(meeting["emails"]))
+        for i, meeting in enumerate(meetings):
+            print("{}: {}".format(i, meeting["emails"]))
             message = get_meet_and_greet_email_body(meeting)
             server.send_message(message)
 

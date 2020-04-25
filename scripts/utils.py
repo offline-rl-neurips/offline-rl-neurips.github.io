@@ -70,12 +70,12 @@ def load_meet_and_greet_data():
     data["emails"] = ""
     data = data.rename(columns={"timeslot": "session"})
     data["session_title"] = data["session"].replace({
-        "1-1:30 PM": "1-1:30pm GMT",
-        "8-8:30 PM": "8-8:30pm GMT"
+        "1:00-1:30 PM": "1:00-1:30pm GMT",
+        "8:00-8:30 PM": "8:00-8:30pm GMT"
     })
     data["session"] = data["session"].replace({
-        "1-1:30 PM": 1,
-        "8-8:30 PM": 2
+        "1:00-1:30 PM": 1,
+        "8:00-8:30 PM": 2
     })
 
     detail_keys = ["institution", "academic_status", "google_scholar", "website"]
