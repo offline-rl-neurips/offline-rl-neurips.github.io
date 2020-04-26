@@ -156,7 +156,7 @@
     title: On Systematic Generalization of Sequence to Sequence Models
     track: research
   - authors: Satyam Mohla, Anshul Nasery, Biplab Banerjee, and Subhasis Chaudhuri
-    camera_ready: false
+    camera_ready: true
     cmt_id: 42
     id: 27
     kind: poster
