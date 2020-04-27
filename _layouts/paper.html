@@ -48,6 +48,16 @@ session_2: false
 		<span> · </span>
 		<span><a href="https://iclr.cc/virtual/workshops_4.html" target="_blank">Password</a></span>
 		{% endif %}
+		{% if page.kind == "oral" %}
+		<span> · </span>
+		<span><a href="/slides/BAICS_{{ page.id }}.pdf" target="_blank">Slides</a></span>
+		{% endif %}
+		</li>
+		{% endif %}
+
+		{% if page.track == "invited" or page.track == "opening" %}
+		<li>
+		<span><a href="/slides/BAICS_{{ page.id }}.pdf" target="_blank">Slides</a></span>
 		</li>
 		{% endif %}
 
