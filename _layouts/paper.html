@@ -19,38 +19,11 @@ session_2: false
 		{% endif %}
 		</li>
 
-		<!-- {% if page.session_id > 0 %} -->
-		<li>
-		<!-- {% if page.camera_ready %} -->
-		<span><a href="/pdf/BAICS_{{ page.id }}.pdf" target="_blank">PDF</a></span>
-		<object data="{{ /pdf/BAICS_{{ page.id }}.pdf }}" width="1000" height="1000" type='application/pdf'></object>
-
-		<!-- {% else %} -->
-		<!-- <span>PDF</span> -->
-		<!-- {% endif %} -->
-		<!-- {% if page.session_id == 1 and layout.session_1 and page.meeting_url %} -->
-		<!-- <span> · </span> -->
-		<!-- <span><a href="{{ page.meeting_url }}" target="_blank">Join Meeting Room</a></span> -->
-		<!-- <span> · </span> -->
-		<!-- <span><a href="https://iclr.cc/virtual/workshops_4.html" target="_blank">Password</a></span> -->
-		<!-- {% elsif page.session_id == 2 and layout.session_2 and page.meeting_url %} -->
-		<!-- <span> · </span> -->
-		<!-- <span><a href="{{ page.meeting_url }}" target="_blank">Join Meeting Room</a></span> -->
-		<!-- <span> · </span> -->
-		<!-- <span><a href="https://iclr.cc/virtual/workshops_4.html" target="_blank">Password</a></span> -->
-		<!-- {% endif %} -->
-<!-- 		{% if page.kind == "oral" %}
-		<span> · </span>
-		<span><a href="/slides/BAICS_{{ page.id }}.pdf" target="_blank">Slides</a></span>
-		{% endif %}
- -->	</li>
-		<!-- {% endif %} -->
-
-		<!-- {% if page.track == "invited" or page.track == "opening" %}
-		<li>
-		<span><a href="/slides/BAICS_{{ page.id }}.pdf" target="_blank">Slides</a></span>
-		</li>
-		{% endif %} -->
+		<object data="{{ /pdf/{{ page.id }}.pdf"  type="application/pdf" >
+    		<embed src="/pdf/{{ page.id }}.pdf" type="application/pdf" width="950px" height="950px">
+        	<!-- <p>This browser does not support PDFs. Please download the PDF to view it: <a href="/pdf/BAICS_{{ page.id }}.pdf">Download PDF</a>.</p> -->
+    		</embed>
+		</object>
 
 	</ul>
 </div>
