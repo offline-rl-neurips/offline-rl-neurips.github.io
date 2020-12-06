@@ -24,6 +24,12 @@
     title: 'DeepAvergers: Offline Reinforcement learning by solving derived non-parametric
       MDPs'
     url: https://drive.google.com/drive/folders/1qN4fMRhRRka__WggPJM9ethFSGG1qhIa?usp=sharing
+  - authors: Caglar Gulcehre, Sergio Gomez, Jakub Sygnowski, Ziyu Wang,  Tom Le Paine,
+      Konrad Zolna, Razvan Pascanu, Yutian Chen, Matt Hoffman
+    id: 41
+    kind: oral
+    title: Addressing Extrapolation Error in Deep Offline Reinforcement Learning
+    url: https://drive.google.com/file/d/1773YQICffurXOeiqK07PqfZguf9a6pn9/view?usp=sharing
   - authors: Hongseok Namkoong*, Samuel Daulton*, Eytan Bakshy
     id: 47
     kind: oral
@@ -114,7 +120,7 @@
     title: Reset-Free Lifelong Learning with Skill-Space Planning
     url: https://drive.google.com/file/d/1SfBQl6mbZ3_w6EXr4hHp8ErEMLS3cK7U/view
   - authors: "Marlesson Santana*, Luckeciano Melo*, Fernando Camargo*, Bruno Brand\xE3\
-      o, \r\nAnderson Soares, Renan Oliveira and Sandor Caetano. "
+      o, \nAnderson Soares, Renan Oliveira and Sandor Caetano. "
     id: 21
     kind: poster
     title: 'MARS-Gym: Offline Reinforcement Learning for Recommender Systems in Marketplaces'
@@ -194,12 +200,6 @@
     kind: poster
     title: Offline Policy Evaluation with New Arms
     url: ''
-  - authors: Caglar Gulcehre, Sergio Gomez, Jakub Sygnowski, Ziyu Wang,  Tom Le Paine,
-      Konrad Zolna, Razvan Pascanu, Yutian Chen, Matt Hoffman
-    id: 41
-    kind: poster
-    title: Addressing Extrapolation Error in Deep Offline Reinforcement Learning
-    url: https://drive.google.com/file/d/1773YQICffurXOeiqK07PqfZguf9a6pn9/view?usp=sharing
   - authors: Yuwei Fu, Wu Di, Benoit Boulet
     id: 42
     kind: poster
