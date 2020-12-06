@@ -35,13 +35,14 @@ url: "{url}"
 id: {id}
 kind: {kind}
 title: "{title}"
+supplement: "{supplement}"
 ---
 """.strip()
 
 
 
 def make_jekyll_data():
-    data = load_presentation_data()
+    data = load_presentation_data()    
     # data = data.sort_values(by="authors")
     # data = data.rename(columns={
     #     "session_id": "session",
@@ -91,7 +92,13 @@ def load_presentation_data():
     data["kind"] = data["kind"].fillna("poster")
     data["url"] = data["url"].fillna("")
     data['authors'] = data['authors'].map(lambda x: x.strip('"'))
+
+    def check_exists(paper_id):
+        path = 'supplement/{}supp.pdf'.format(paper_id)
+        return os.path.exists(path)
+
     data = data.astype({"id": int})
+    data['supplement'] = data['id'].apply(check_exists)
     return data
 
 

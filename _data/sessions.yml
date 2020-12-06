@@ -3,24 +3,28 @@
   - authors: Seunghyun Lee, Younggyu Seo, Kimin Lee, Pieter Abbeel, Jinwoo Shin
     id: 13
     kind: oral
+    supplement: false
     title: Addressing Distribution Shift in Online Reinforcement Learning with Offline
       Datasets
     url: https://studio.slideslive.com/web_recorder/share/20201113T080706Z__NeurIPS_workshop__19733__poster-addressing-distributio?s=21308843-47cb-4037-a653-9f3063e05b66
   - authors: Wenxuan Zhou, Sujay Bajracharya, David Held
     id: 17
     kind: oral
+    supplement: true
     title: 'PLAS: Latent Action Space for Offline Reinforcement Learning'
     url: https://drive.google.com/file/d/1CKG0TxGBLCJxmWJn5Oc0_3yniXR8Jr1l/view?usp=sharing
   - authors: Avi Singh, Albert Yu, Jonathan H. Yang, Jesse Zhang, Aviral Kumar, Sergey
       Levine
     id: 19
     kind: oral
+    supplement: true
     title: 'COG: Connecting New Skills to Past Experience with Offline Reinforcement
       Learning'
     url: https://www.youtube.com/watch?v=ZC1arY5YjCI&feature=emb_logo
   - authors: Aayam shrestha, Stefan Lee, Prasad Tadepalli, Alan Fern
     id: 40
     kind: oral
+    supplement: false
     title: 'DeepAvergers: Offline Reinforcement learning by solving derived non-parametric
       MDPs'
     url: https://drive.google.com/drive/folders/1qN4fMRhRRka__WggPJM9ethFSGG1qhIa?usp=sharing
@@ -28,112 +32,132 @@
       Konrad Zolna, Razvan Pascanu, Yutian Chen, Matt Hoffman
     id: 41
     kind: oral
+    supplement: false
     title: Addressing Extrapolation Error in Deep Offline Reinforcement Learning
     url: https://drive.google.com/file/d/1773YQICffurXOeiqK07PqfZguf9a6pn9/view?usp=sharing
   - authors: Hongseok Namkoong*, Samuel Daulton*, Eytan Bakshy
     id: 47
     kind: oral
+    supplement: true
     title: 'Distilled Thompson Sampling: Practical and Efficient Thompson Sampling
       via Imitation Learning'
     url: https://youtu.be/InpIX3sNeLQ
   - authors: Ruosong Wang, Dean Foster, Sham Kakade
     id: 49
     kind: oral
+    supplement: false
     title: What are the Statistical Limits of Offline RL with Linear Function Approximation?
     url: https://slideslive.com/38941570/what-are-the-statistical-limits-of-offline-rl-with-linear-function-approximation
   - authors: 'Diksha Garg, Priyanka Gupta, Pankaj Malhotra, Lovekesh Vig, and Gautam
       Shroff '
     id: 50
     kind: oral
+    supplement: true
     title: Batch-Constrained Distributional Reinforcement Learning for Session-based
       Recommendation
     url: https://drive.google.com/drive/folders/1yU1EMNW6eMoCBDw8007d6q-I8y6yNimS?usp=sharing
   - authors: Yuta Saito, Shunsuke Aihara, Megumi Matsutani, and Yusuke Narita
     id: 2
     kind: poster
+    supplement: true
     title: Large-scale Open Dataset, Pipeline, and Benchmark for Off-Policy Evaluation
     url: https://youtu.be/8c0TS95dtLA
   - authors: Jiawei Huang*, Nan Jiang
     id: 3
     kind: poster
+    supplement: true
     title: On the Convergence Rate of Density Ratio Learning Based Off-Policy Policy
       Gradient Methods
     url: https://youtu.be/tZn7t46JfGA
   - authors: Jacob Buckman, Carles Gelada, Marc G. Bellemare
     id: 6
     kind: poster
+    supplement: false
     title: The Importance of Pessimism in Fixed-Dataset Policy Optimization
     url: https://www.youtube.com/watch?v=TaJ4P2Hyu3g
   - authors: Seyed Kamyar Seyed Ghasemipour, Dale Schuurmans, Shixiang Gu
     id: 7
     kind: poster
+    supplement: false
     title: 'EMaQ: Expected-Max Q-Learning Operator for Simple Yet Effective Offline
       and Online RL'
     url: ''
   - authors: Shangtong Zhang, Bo Liu, Shimon Whiteson
     id: 8
     kind: poster
+    supplement: false
     title: Mean-Variance Policy Iteration for Risk-Averse Reinforcement Learning
     url: https://drive.google.com/file/d/1VC69azl46HMQhNk1U5Sa9nqTgd8aUrqV/view?usp=sharing
   - authors: Yijie Guo, Shengyu Feng, Nicolas Le Roux, Ed Chi, Honglak Lee, Minmin
       Chen
     id: 9
     kind: poster
+    supplement: true
     title: Batch Reinforcement Learning Through Continuation Method
     url: https://drive.google.com/file/d/1Mj9lvRpuLpg1ybidRACeDxFSoH3DJvqg/view?usp=sharing
   - authors: Yanan Wang, Yong Ge, Li Li, Rui Chen, Tong Xu
     id: 10
     kind: poster
+    supplement: false
     title: 'M$^3$Rec: An Offline Meta-level Model-based Reinforcement Learning Approach
       for Cold-Start Recommendation'
     url: https://www.dropbox.com/s/s8zqj2fagbs03gs/nips_workshop_video.mp4?dl=0
   - authors: Deployment-Efficient Reinforcement Learning via Model-Based Offline Optimization
     id: 11
     kind: poster
+    supplement: false
     title: Deployment-Efficient Reinforcement Learning via Model-Based Offline Optimization
     url: https://youtu.be/4TbTMjidoBg
   - authors: Brahma S. Pavse, Josiah P. Hanna, Ishan Durugkar, Peter Stone
     id: 12
     kind: poster
+    supplement: false
     title: On Sampling Error in Batch Action-Value Prediction Algorithms
     url: https://www.youtube.com/watch?v=8A2fA1ZEFfg&feature=youtu.be
   - authors: Eric Mitchell, Rafael Rafailov, Xue Bin Peng, Sergey Levine, Chelsea
       Finn
     id: 14
     kind: poster
+    supplement: false
     title: Offline Meta-Reinforcement Learning with Advantage Weighting
     url: https://youtu.be/oElKA_TtLGM
   - authors: Konrad Zolna, Alexander Novikov, Ksenia Konyushova, Caglar Gulcehre,
       Ziyu Wang, Yusuf Aytar, Misha Denil, Nando de Freitas, Scott Reed
     id: 15
     kind: poster
+    supplement: true
     title: Offline Learning from Demonstrations and Unlabeled Experience
     url: https://youtu.be/AoXfGvWNRXo
   - authors: Francesco Faccio, Louis Kirsch, Juergen Schmidhuber
     id: 16
     kind: poster
+    supplement: true
     title: Parameter-based Value Functions
     url: https://youtu.be/0TIuQUAO_EI
   - authors: Kevin Lu, Aditya Grover, Pieter Abbeel, Igor Mordatch
     id: 20
     kind: poster
+    supplement: false
     title: Reset-Free Lifelong Learning with Skill-Space Planning
     url: https://drive.google.com/file/d/1SfBQl6mbZ3_w6EXr4hHp8ErEMLS3cK7U/view
   - authors: "Marlesson Santana*, Luckeciano Melo*, Fernando Camargo*, Bruno Brand\xE3\
       o, \nAnderson Soares, Renan Oliveira and Sandor Caetano. "
     id: 21
     kind: poster
+    supplement: false
     title: 'MARS-Gym: Offline Reinforcement Learning for Recommender Systems in Marketplaces'
     url: https://youtu.be/TrQRus3E7jU
   - authors: "Piotr Kozakowski, \u0141ukasz Kaiser, Henryk Michalewski, Afroz Mohiuddin,\
       \ Katarzyna Ka\u0144ska"
     id: 22
     kind: poster
+    supplement: true
     title: Q-Value Weighted Regression:Reinforcement Learning with Limited Data
     url: https://youtu.be/PtScpGgXPmA
   - authors: Anurag Ajay, Aviral Kumar, Pulkit Agrawal, Sergey Levine, Ofir Nachum
     id: 23
     kind: poster
+    supplement: false
     title: 'OPAL: Offline Primitive Discovery for Accelerating Offline Reinforcement
       Learning'
     url: https://drive.google.com/file/d/145fX8-TneNCiKCZO_k2mgY_gIoBOKF3t/view?usp=sharing
@@ -141,11 +165,13 @@
       Chelsea Finn, Sergey Levine
     id: 24
     kind: poster
+    supplement: true
     title: Model-Based Visual Planning with Self-Supervised Functional Distances
     url: https://drive.google.com/file/d/1b8T58RIjeR3Gy38Kd4FXwAE1S78h2qcP/view?usp=sharing
   - authors: Jinlin Lai, Lixin Zou, Jiaxing Song
     id: 26
     kind: poster
+    supplement: true
     title: Optimal Mixture Weights for Off-Policy Evaluation with Multiple Behavior
       Policies
     url: https://youtu.be/PU5rB0gwj44
@@ -153,61 +179,72 @@
       Ruslan Salakhutdinov, Hanlin Goh
     id: 27
     kind: poster
+    supplement: false
     title: Uncertainty Weighted Offline Reinforcement Learning
     url: https://youtu.be/DO4dxJOLfOU
   - authors: Riashat Islam, Samarth Sinha, Homanga Bharadhwaj, Samin Yeasar Arnob,
       Zhuoran Yang, Animesh Garg, Zhaoran Wang, Lihong Li, Doina Precup
     id: 28
     kind: poster
+    supplement: true
     title: Offline Policy Optimization with Variance Regularization
     url: ''
   - authors: Luca Weihs*, Unnat Jain*, Jordi Salvador, Svetlana Lazebnik, Aniruddha
       Kembhavi, Alexander Schwing
     id: 30
     kind: poster
+    supplement: true
     title: Bridging the Imitation Gap by Adaptive Insubordination
     url: https://youtu.be/ntfmSxya91M
   - authors: Daoming Lyu, Qi Qi, Mohammad Ghavamzadeh, Hengshuai Yao, Tianbao Yang,
       Bo Liu
     id: 31
     kind: poster
+    supplement: true
     title: Variance-Reduced Off-Policy Memory-Efficient Policy Search
     url: https://drive.google.com/file/d/1NznuhcoBfsEwZPxYg6PWkAsO9mLvXHbK/view?usp=sharing
   - authors: Ksenia Konyushova, Konrad Zolna, Yusuf Aytar, Alexander Novikov, Scott
       Reed, Serkan Cabi, Nando de Freitas
     id: 32
     kind: poster
+    supplement: true
     title: Semi-supervised reward learning for offline reinforcement learning
     url: https://youtu.be/OxEb4-fEY4M
   - authors: "Chaochao Lu, Biwei Huang, Ke Wang, Jos\xE9 Miguel Hern\xE1ndez-Lobato,\
       \ Kun Zhang, Bernhard Sch\xF6lkopf"
     id: 34
     kind: poster
+    supplement: false
     title: Sample-Efficient Reinforcement Learning via Counterfactual-Based Data Augmentation
     url: https://www.dropbox.com/s/a8kg2n7kf6q622v/offline_workshop_paper34.mov?dl=0
   - authors: "N\xFAria Armengol-Urp\xED, Sebastian Curi, Andreas Krause"
     id: 35
     kind: poster
+    supplement: true
     title: Risk-averse Offline Reinforcement Lerarning
     url: https://youtu.be/nXBF0Pcj-qI
   - authors: Qiang He, Xinwen Hou, Yu Liu
     id: 37
     kind: poster
+    supplement: true
     title: 'POPO: Pessimistic Offline Policy Optimization'
     url: https://www.youtube.com/watch?v=b-GdLUB3DeY&feature=youtu.be
   - authors: Ben London, Thorsten Joachims
     id: 38
     kind: poster
+    supplement: false
     title: Offline Policy Evaluation with New Arms
     url: ''
   - authors: Yuwei Fu, Wu Di, Benoit Boulet
     id: 42
     kind: poster
+    supplement: false
     title: 'Batch Reinforcement Learning in the Real World: A Survey'
     url: https://drive.google.com/file/d/1wZGr-PDv_E7GgMhNVxuHNv9VjGAQh5G3/view?usp=sharing
   - authors: Balazs Kegl, Gabriel Hurtado, Albert Thomas
     id: 44
     kind: poster
+    supplement: false
     title: 'Model-based micro-data reinforcement learning: what are the crucial model
       properties and which model to choose?'
     url: ''
@@ -215,84 +252,100 @@
       Zolna, Alexander Novikov, Ziyu Wang, Nando de Freitas
     id: 45
     kind: poster
+    supplement: false
     title: Offline Hyperparameter Selection for Offline Reinforcement Learning
     url: https://youtu.be/2mvGE2KxQXA
   - authors: 'Tianyuan Jin, Pan Xu, Xiaokui Xiao, Quanquan Gu '
     id: 46
     kind: poster
+    supplement: true
     title: 'Double Explore-then-Commit: Asymptotic Optimality and Beyond'
     url: ''
   - authors: Ming Yin, Yu Bai, and Yu-Xiang Wang
     id: 48
     kind: poster
+    supplement: true
     title: Near-Optimal Provable Uniform Convergence in Offline Policy Evaluation
       for Reinforcement Learning
     url: https://youtu.be/yBL-Qw7PalQ
   - authors: Ramki Gummadi, Dale Schuurmans
     id: 51
     kind: poster
+    supplement: false
     title: Gradient Analysis and Approximations for Off-policy Optimization
     url: https://youtu.be/tu1aX8gqtjI
   - authors: Jakub Kmec, Louis Monier, Alexandre Laterre, Thomas Pierrot, Valentin
       Courgeau, Olivier Sigaud, Karim Beguir
     id: 52
     kind: poster
+    supplement: false
     title: Offline Reinforcement Learning Hands-On
     url: https://youtu.be/Z0tNI_nfBeY
   - authors: Annie S Chen*, HyunJi Nam*, Suraj Nair*, Chelsea Finn
     id: 53
     kind: poster
+    supplement: true
     title: Batch Exploration with Examples for Scalable Robotic Reinforcement Learning
     url: https://youtu.be/udtHVIubiF8
   - authors: Alex Lewandowski, Vincent Zhang, Dale Schuurmans
     id: 54
     kind: poster
+    supplement: false
     title: Recurrent Open-loop Control in Offline Reinforcement Learning
     url: https://drive.google.com/file/d/1D3W8e0xR3IPiQ-0NU76MsgpFSXBKTpTW/view?usp=sharing
   - authors: Canmanie T. Ponnambalam, Frans. A. Oliehoek, Matthijs T. J. Spaan
     id: 55
     kind: poster
+    supplement: false
     title: Abstraction-Guided Policy Recovery from Expert Demonstrations
     url: https://vimeo.com/484558259
   - authors: Sonali Parbhoo, Omer Gottesman, Finale Doshi-Velez
     id: 56
     kind: poster
+    supplement: true
     title: Shaping Control Variates for Off-Policy Evaluation
     url: https://drive.google.com/file/d/1MiEiF5veieaqizuokHpxifYi7K7ZAXV4/view?usp=sharing
   - authors: Michel Ma, Pierre-Luc Bacon
     id: 57
     kind: poster
+    supplement: false
     title: Counterfactual Policy Evaluation and the Conditional Monte Carlo Method
     url: https://www.youtube.com/watch?v=A9ZhzZ3gbl0
   - authors: Aaron Sonabend, Nilanjana Laha, Rajarshi Mukherjee, Tianxi Cai
     id: 59
     kind: poster
+    supplement: true
     title: Semi-Supervised Learning for Doubly Robust Offline Policy Evaluation
     url: https://www.dropbox.com/s/jrh4znpbvug0vvv/SSL%20for%20Offline%20Policy%20Evaluation.mov?dl=0
   - authors: Wonjoon Goo, Scott Niekum
     id: 60
     kind: poster
+    supplement: false
     title: You Only Evaluate Once -- a Simple Baseline Algorithm for Offline RL
     url: https://youtu.be/wxTXhCGJQkk
   - authors: Rafael Rafailov*, Tianhe Yu*, Aravind Rajeswaran, Chelsea Finn
     id: 61
     kind: poster
+    supplement: true
     title: Offline Reinforcement Learning From Images with Latent Space Models
     url: https://drive.google.com/drive/folders/1MNSo6DLUeTy8bh-Nb8ExTouoDKK1ruK6?usp=sharing
   - authors: Adam Villaflor, John Dolan, Jeff Schneider
     id: 62
     kind: poster
+    supplement: false
     title: Fine-Tuning Offline Reinforcement Learning with Model-Based Policy Optimization
     url: https://drive.google.com/file/d/1ls7x4vXNOaFEd_BeL8Ur2JoAFNziGlSf/view?usp=sharing
   - authors: K.R. Zentner, Ryan Julian, Ujjwal Puri, Yulun Zhang, Gaurav Sukhatme
     id: 63
     kind: poster
+    supplement: false
     title: Towards Exploiting Geometry and Time for Fast Off-Distribution Adaptation
       in Multi-Task Robot Learning
     url: https://drive.google.com/file/d/1DlIpUa5TcaRLDojI3NH4c04FDhaqfKJ9/view?usp=sharing
   - authors: Brandon Trabucco, Aviral Kumar, Xinyang Geng, Sergey Levine
     id: 65
     kind: poster
+    supplement: false
     title: 'Conservative Objective Models: A Simple Approach to Effective Model-Based
       Optimization'
     url: https://drive.google.com/file/d/16rGUtaz35ZE0S3xguB_smrTV57nvkNOQ/view?usp=sharing
