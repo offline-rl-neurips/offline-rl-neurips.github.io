@@ -192,3 +192,9 @@ table .time {
     margin: 0 -1em;
   }
 }
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

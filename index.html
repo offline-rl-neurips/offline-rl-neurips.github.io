@@ -2,6 +2,11 @@
 layout: default
 ---
 
+<figure>
+    <img class="center" src="https://offline-rl.github.io/assets/OFFLINE_RL.gif" width="65%" />
+    <figcaption style='text-align: center'><small>Source: <a href="https://ai.googleblog.com/2020/04/an-optimistic-perspective-on-offline.html">Google AI Blog </a></small></figcaption>
+</figure>
+
 <div class="row">
   
 <p>The remarkable success of deep learning has been driven by the availability of large and diverse datasets such as ImageNet. In contrast, the common paradigm in reinforcement learning (RL) assumes that an agent frequently interacts with the environment and learns using its own collected experience. This mode of operation is prohibitive for many complex real-world problems, where repeatedly collecting diverse data is expensive (<span><em>e.g.,</em></span> robotics or educational agents) and/or potentially unsafe (<span><em>e.g.,</em></span> healthcare).</p>
@@ -19,6 +24,7 @@ layout: default
 <li>Connections to transfer learning, self-supervised learning and generative modelling</li>
 </ul>
 </div>
+
 <div id="organizers" class="row">
 <h2>Organizers</h2>
 <div class="break"></div>
@@ -29,9 +35,6 @@ layout: default
    <a href="{{ person.url | relative_url }}">{{ person.name }}</a> <div style="height:4px;"></div>
    <span>{{ person.title | replace: '&', '<div style="height:4px;"></div>' }}</span>
 </div>
- 
-  
-
 {%- endfor -%}
 </div>
 </div>
