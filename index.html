@@ -4,271 +4,39 @@ layout: default
 
 <div class="row">
   
-<p>The remarkable success of deep learning has been driven by the availability of large and diverse datasets, such as ImageNet, that are challenging to collect, but can be reused repeatedly. In contrast, the common paradigm in reinforcement learning (RL) assumes that an agent frequently interacts with the environment and learns using its own collected experience. This mode of operation is prohibitive for many complex real-world problems, where repeatedly collecting diverse data is expensive (<span><em>e.g.,</em></span> robotics or educational agents) and/or potentially unsafe (<span><em>e.g.,</em></span> healthcare).</p>
-<p>Alternatively, <em>Offline RL</em>, or pure batch RL, focuses on training agents with logged data in an offline fashion with no further environment interaction. Offline RL promises to bring forward a data-driven RL paradigm and carries the potential to scale up end-to-end learning approaches to real-world decision making tasks such as robotics, recommendation systems, dialogue generation, autonomous driving, healthcare systems and safety-critical applications. Recently, successful deep RL algorithms have been adapted to the offline RL setting and demonstrated a potential for success in a number of domains, however, significant algorithmic and practical challenges remain to be addressed. Within the past two years, performance on simple benchmarks has rapidly risen, so the community has also started developing standardized benchmarks (<a href="https://deepmind.com/research/open-source/RL-Unplugged-An-Offline-RL-Benchmark-Suite">RLUnplugged</a>, <a href="https://sites.google.com/view/d4rl/home">D4RL</a>) specifically designed to stress-test offline RL algorithms. However, these are only initial proposals that could benefit from community input on design and evaluation protocol.</p>
-  <br>
+<p>The remarkable success of deep learning has been driven by the availability of large and diverse datasets such as ImageNet. In contrast, the common paradigm in reinforcement learning (RL) assumes that an agent frequently interacts with the environment and learns using its own collected experience. This mode of operation is prohibitive for many complex real-world problems, where repeatedly collecting diverse data is expensive (<span><em>e.g.,</em></span> robotics or educational agents) and/or potentially unsafe (<span><em>e.g.,</em></span> healthcare).</p>
+<p>Alternatively, <em>Offline RL</em> focuses on training agents with logged data with no further environment interaction. Offline RL promises to bring forward a data-driven RL paradigm and carries the potential to scale up end-to-end learning approaches to real-world decision making tasks such as robotics, recommendation systems, dialogue generation, autonomous driving, healthcare systems and safety-critical applications. Recently, successful deep RL algorithms have been adapted to the offline RL setting and demonstrated a potential for success in a number of domains, however, significant algorithmic and practical challenges remain to be addressed. Within the past two years, performance on simple benchmarks has rapidly risen, so the community has also started developing standardized benchmarks (<a href="https://deepmind.com/research/open-source/RL-Unplugged-An-Offline-RL-Benchmark-Suite">RLUnplugged</a>, <a href="https://sites.google.com/view/d4rl/home">D4RL</a>) specifically designed to stress-test offline RL algorithms. 
+<!-- However, these are only initial proposals that could benefit from community input on design and evaluation protocol.</p> -->
+
 <p><strong>Goal of the workshop</strong>: Our goal is to bring attention to offline RL, both from within and from outside the RL community (e.g., causal inference, optimization, self-supervised learning), discuss algorithmic challenges that need to be addressed, discuss potential real-world applications, discuss limitations and challenges, and come up with concrete problem statements and evaluation protocols, inspired from real-world applications, for the research community to work on. In particular, we are interested in bringing together researchers and practitioners to discuss questions on theoretical, empirical, and practical aspects of offline RL, including but not limited to,</p>
 <ul>
-<li><p>Algorithmic decisions and associated challenges in training RL agents offline</p></li>
-<li><p>Properties of supervision needed to guarantee the success of offline RL methods</p></li>
-<li><p>Relationship with learning under uncertainty: Bayesian inference and causal inference</p></li>
-<li><p>Model selection, off-policy evaluation and theoretical limitations</p></li>
-<li><p>Relationship and integration with the conventional online RL paradigms</p></li>
-<li><p>Evaluation protocols and frameworks and real-world datasets and benchmarks</p></li>
-<li><p>Connections to transfer learning, self-supervised learning and generative modelling</p></li>
+<li>Algorithmic decisions and associated challenges in training RL agents offline</li>
+<li>Properties of supervision needed to guarantee the success of offline RL methods</li>
+<li>Relationship with learning under uncertainty: Bayesian inference and causal inference</li>
+<li>Model selection, off-policy evaluation and theoretical limitations</li>
+<li>Relationship and integration with the conventional online RL paradigms</li>
+<li>Evaluation protocols and frameworks and real-world datasets and benchmarks</li>
+<li>Connections to transfer learning, self-supervised learning and generative modelling</li>
 </ul>
 </div>
 <div id="organizers" class="row">
 <h2>Organizers</h2>
 <div class="break"></div>
-<ul>
-  <li><b><a href="https://agarwl.github.io/">Rishabh Agarwal</a></b> (Google Research, Brain Team and MILA)</li>
-  <li><b><a href="https://aviralkumar2907.github.io/">Aviral Kumar</a></b> (UC Berkeley)</li>
-  <li><b><a href="https://sites.google.com/view/gjt">George Tucker</a></b> (Google Research, Brain Team)</li>
-  <li><b><a href="https://www.cs.mcgill.ca/~dprecup/">Doina Precup</a></b> (DeepMind, McGill University)</li>
-  <li><b><a href="https://lihongli.github.io">Lihong Li</a></b> (Amazon)</li>
-</ul>
+<div style="text-align: left;">
+{%- for person in site.data.organizers -%}
+<div class="person">
+  <img src="{{ person.image }}" height="170px" /><div style="height:12px;"></div>
+   <a href="{{ person.url | relative_url }}">{{ person.name }}</a> <div style="height:4px;"></div>
+   <span>{{ person.title | replace: '&', '<div style="height:4px;"></div>' }}</span>
+</div>
+ 
+  
+
+{%- endfor -%}
+</div>
 </div>
 <p> To contact the organizers, please send an email to <a href="mailto:offline-rl-neurips@google.com">offline-rl-neurips@google.com</a>. <p>
 
 
 <p style="text-align:right">
   <small> Thanks to Jessica Hamrick for allowing us to borrow this <a href="https://baicsworkshop.github.io/index.html">template</a>. </small> </p>
-
-<!-- <div id="pc" class="row">
-<h2>Program Committee</h2>
-<table>
-  <tr>
-  <td>Adam Marblestone</td>
-  <td>Aishwarya Agrawal</td>
-  <td>Andrea Banino</td>
-  </tr>
-  <tr>
-  <td>Andrew Jaegle</td>
-  <td><a href="http://anselmrothe.github.io">Anselm Rothe</a></td>
-  <td>Ari Holtzman</td>
-  </tr>
-  <tr>
-  <td>Bas van Opheusden</td>
-  <td>Ben Peloquin</td>
-  <td>Bill Thompson</td>
-  </tr>
-  <tr>
-  <td>Charlie Nash</td>
-  <td>Danfei Xu</td>
-  <td>Emin Orhan</td>
-  </tr>
-  <tr>
-  <td><a href="http://stanford.edu/~ebiyik">Erdem Biyik</a></td>
-  <td>Erin Grant</td>
-  <td>Jon Gauthier</td>
-  </tr>
-  <tr>
-  <td>Josh Merel</td>
-  <td><a href="https://twitter.com/joshuacpeterson">Joshua Peterson</a></td>
-  <td>Kelsey Allen</td>
-  </tr>
-  <tr>
-  <td>Kevin Ellis</td>
-  <td>Kevin McKee</td>
-  <td>Kevin Smith</td>
-  </tr>
-  <tr>
-  <td>Leila Wehbe</td>
-  <td><a href="https://people.eecs.berkeley.edu/~lisa_anne/
-">Lisa Anne Hendricks</a></td>
-  <td>Luis Piloto</td>
-  </tr>
-  <tr>
-  <td>Mark Ho</td>
-  <td><a href="https://www.people.hps.cam.ac.uk/index/teaching-officers/halina">Marta Halina</a></td>
-  <td>Marta Kryven</td>
-  </tr>
-  <tr>
-  <td>Matthew Overlan</td>
-  <td>Max Kleiman-Weiner</td>
-  <td><a href="http://maxwellforbes.com">Maxwell Forbes</a></td>
-  </tr>
-  <tr>
-  <td>Maxwell Nye</td>
-  <td><a href="http://mbchang.github.io/">Michael Chang</a></td>
-  <td>Minae Kwon</td>
-  </tr>
-  <tr>
-  <td>Pedro Tsividis</td>
-  <td>Peter Battaglia</td>
-  <td><a href="https://qiongzhang.github.io">Qiong Zhang</a></td>
-  </tr>
-  <tr>
-  <td>Raphael Koster</td>
-  <td>Richard Futrell</td>
-  <td><a href="https://rxdhawkins.com">Robert Hawkins</a></td>
-  </tr>
-  <tr>
-  <td>Sandy Huang</td>
-  <td>Stephan Meylan</td>
-  <td>Suraj Nair</td>
-  </tr>
-  <tr>
-  <td>Tal Linzen</td>
-  <td>Tina Zhu</td>
-  <td><a href="https://www.waikeenvong.com/">Wai Keen Vong</a></td>
-  </tr>
-</table>
-</div> -->
-
-<!-- <div id="references" class="row"> -->
-<!-- <div id="refs" class="references hanging-indent" role="doc-bibliography">
-<h2>References</h2>
-
-<div id="ref-rishabh_blog">
-<p><span class="smallcaps">Agarwal, R.</span> 2020. An optimistic perspective on offline reinforcement learning..</p>
-</div>
-<div id="ref-agarwal2019striving">
-<p><span class="smallcaps">Agarwal, R., Schuurmans, D., and Norouzi, M.</span> 2020. An optimistic perspective on offline reinforcement learning. <em>International conference on machine learning</em>.</p>
-</div>
-<div id="ref-bodnar2019quantile">
-<p><span class="smallcaps">Bodnar, C., Li, A., Hausman, K., Pastor, P., and Kalakrishnan, M.</span> 2019. Quantile qt-opt for risk-aware vision-based robotic grasping. <em>arXiv preprint arXiv:1910.02787</em>.</p>
-</div>
-<div id="ref-bottou2013counterfactual">
-<p><span class="smallcaps">Bottou, L., Peters, J., Quiñonero-Candela, J., et al.</span> 2013. Counterfactual reasoning and learning systems: The example of computational advertising. <em>JMLR</em>.</p>
-</div>
-<div id="ref-cabi2019framework">
-<p><span class="smallcaps">Cabi, S., Colmenarejo, S.G., Novikov, A., et al.</span> 2019. A framework for data-driven robotics. <em>arXiv preprint arXiv:1909.12200</em>.</p>
-</div>
-<div id="ref-chen2019information">
-<p><span class="smallcaps">Chen, J. and Jiang, N.</span> 2019. Information-theoretic considerations in batch reinforcement learning. <em>ICML</em>.</p>
-</div>
-<div id="ref-chen2019bail">
-<p><span class="smallcaps">Chen, X., Zhou, Z., Wang, Z., et al.</span> 2019. BAIL: Best-action imitation learning for batch deep reinforcement learning. <em>arXiv preprint arXiv:1910.12179</em>.</p>
-</div>
-<div id="ref-dai2017boosting">
-<p><span class="smallcaps">Dai, B., Shaw, A., He, N., Li, L., and Song, L.</span> 2017. Boosting the actor with dual critic. <em>arXiv preprint arXiv:1712.10282</em>.</p>
-</div>
-<div id="ref-dai2018sbeed">
-<p><span class="smallcaps">Dai, B., Shaw, A., Li, L., et al.</span> 2018. SBEED: Convergent reinforcement learning with nonlinear function approximation. <em>International conference on machine learning</em>, 1125–1134.</p>
-</div>
-<div id="ref-imagenet_cvpr09">
-<p><span class="smallcaps">Deng, J., Dong, W., Socher, R., Li, L.-J., Li, K., and Fei-Fei, L.</span> 2009. ImageNet: A Large-Scale Hierarchical Image Database. <em>CVPR</em>.</p>
-</div>
-<div id="ref-dudik2014doubly">
-<p><span class="smallcaps">Dudı́k, M., Erhan, D., Langford, J., Li, L., and others</span>. 2014. Doubly robust policy evaluation and optimization. <em>Statistical Science</em> <em>29</em>, 4, 485–511.</p>
-</div>
-<div id="ref-dulac2019challenges">
-<p><span class="smallcaps">Dulac-Arnold, G., Mankowitz, D., and Hester, T.</span> 2019. Challenges of real-world reinforcement learning. <em>arXiv preprint arXiv:1904.12901</em>.</p>
-</div>
-<div id="ref-ernst2005tree">
-<p><span class="smallcaps">Ernst, D., Geurts, P., and Wehenkel, L.</span> 2005. Tree-based batch mode reinforcement learning. <em>JMLR</em>.</p>
-</div>
-<div id="ref-d4rl">
-<p><span class="smallcaps">Fu, J., Kumar, A., Nachum, O., Tucker, G., and Levine, S.</span> 2020. D4RL: Datasets for deep data-driven reinforcement learning. <em>ArXiv</em>.</p>
-</div>
-<div id="ref-fujimoto2019benchmarking">
-<p><span class="smallcaps">Fujimoto, S., Conti, E., Ghavamzadeh, M., and Pineau, J.</span> 2019. Benchmarking batch deep reinforcement learning algorithms. <em>arXiv preprint arXiv:1910.01708</em>.</p>
-</div>
-<div id="ref-fujimoto2018off">
-<p><span class="smallcaps">Fujimoto, S., Meger, D., and Precup, D.</span> 2018. Off-policy deep reinforcement learning without exploration. <em>arXiv preprint arXiv:1812.02900</em>.</p>
-</div>
-<div id="ref-gottesman2020interpretable">
-<p><span class="smallcaps">Gottesman, O., Futoma, J., Liu, Y., et al.</span> 2020. Interpretable off-policy evaluation in reinforcement learning by highlighting influential transitions. <em>arXiv preprint arXiv:2002.03478</em>.</p>
-</div>
-<div id="ref-gulcehre2020rl">
-<p><span class="smallcaps">Gulcehre, C., Wang, Z., Novikov, A., et al.</span> 2020. RL unplugged: Benchmarks for offline reinforcement learning. <em>arXiv preprint arXiv:2006.13888</em>.</p>
-</div>
-<div id="ref-hoppe2019qgraph">
-<p><span class="smallcaps">Hoppe, S. and Toussaint, M.</span> 2019. Qgraph-bounded q-learning: Stabilizing model-free off-policy deep reinforcement learning..</p>
-</div>
-<div id="ref-jaques2019way">
-<p><span class="smallcaps">Jaques, N., Ghandeharioun, A., Shen, J.H., et al.</span> 2019. Way off-policy batch deep reinforcement learning of implicit human preferences in dialog. <em>arXiv preprint arXiv:1907.00456</em>.</p>
-</div>
-<div id="ref-jiang2016doubly">
-<p><span class="smallcaps">Jiang, N. and Li, L.</span> 2016. Doubly robust off-policy value evaluation for reinforcement learning. <em>International conference on machine learning</em>, 652–661.</p>
-</div>
-<div id="ref-karampatziakis2019empirical">
-<p><span class="smallcaps">Karampatziakis, N., Langford, J., and Mineiro, P.</span> 2019. Empirical likelihood for contextual bandits. <em>arXiv preprint arXiv:1906.03323</em>.</p>
-</div>
-<div id="ref-kidambi2020morel">
-<p><span class="smallcaps">Kidambi, R., Rajeswaran, A., Netrapalli, P., and Joachims, T.</span> 2020. MOReL: Model-based offline reinforcement learning. <em>arXiv preprint arXiv:2005.05951</em>.</p>
-</div>
-<div id="ref-kumar_blog">
-<p><span class="smallcaps">Kumar, A.</span> 2019. Data-driven deep reinforcement learning..</p>
-</div>
-<div id="ref-kumar2019stabilizing">
-<p><span class="smallcaps">Kumar, A., Fu, J., Tucker, G., and Levine, S.</span> 2019. Stabilizing Off-Policy Q-Learning via Bootstrapping Error Reduction. <em>NeurIPS</em>.</p>
-</div>
-<div id="ref-kumar2020conservative">
-<p><span class="smallcaps">Kumar, A., Zhou, A., Tucker, G., and Levine, S.</span> 2020. Conservative q-learning for offline reinforcement learning. <em>arXiv preprint arXiv:2006.04779</em>.</p>
-</div>
-<div id="ref-lange2012batch">
-<p><span class="smallcaps">Lange, S., Gabel, T., and Riedmiller, M.</span> 2012. Batch reinforcement learning. <em>Reinforcement learning</em>.</p>
-</div>
-<div id="ref-langford_talk">
-<p><span class="smallcaps">Langford, J.</span> 2019. A real-world reinforcement learning revolution..</p>
-</div>
-<div id="ref-laroche2019safe">
-<p><span class="smallcaps">Laroche, R., Trichelair, P., and Des Combes, R.T.</span> 2019. Safe policy improvement with baseline bootstrapping. <em>International conference on machine learning</em>, 3652–3661.</p>
-</div>
-<div id="ref-levine2020offline">
-<p><span class="smallcaps">Levine, S., Kumar, A., Tucker, G., and Fu, J.</span> 2020. Offline reinforcement learning: Tutorial, review, and perspectives on open problems. <em>arXiv preprint arXiv:2005.01643</em>.</p>
-</div>
-<div id="ref-liu2019understanding">
-<p><span class="smallcaps">Liu, Y., Bacon, P.-L., and Brunskill, E.</span> 2019a. Understanding the curse of horizon in off-policy evaluation via conditional importance sampling. <em>arXiv preprint arXiv:1910.06508</em>.</p>
-</div>
-<div id="ref-liu2019off">
-<p><span class="smallcaps">Liu, Y., Swaminathan, A., Agarwal, A., and Brunskill, E.</span> 2019b. Off-policy policy gradient with state distribution correction. <em>arXiv preprint arXiv:1904.08473</em>.</p>
-</div>
-<div id="ref-matsushima2020deployment">
-<p><span class="smallcaps">Matsushima, T., Furuta, H., Matsuo, Y., Nachum, O., and Gu, S.</span> 2020. Deployment-efficient reinforcement learning via model-based offline optimization. <em>arXiv preprint arXiv:2006.03647</em>.</p>
-</div>
-<div id="ref-nachum2019dualdice">
-<p><span class="smallcaps">Nachum, O., Chow, Y., Dai, B., and Li, L.</span> 2019a. Dualdice: Behavior-agnostic estimation of discounted stationary distribution corrections. <em>Advances in neural information processing systems</em>, 2318–2328.</p>
-</div>
-<div id="ref-nachum2019algaedice">
-<p><span class="smallcaps">Nachum, O., Dai, B., Kostrikov, I., Chow, Y., Li, L., and Schuurmans, D.</span> 2019b. AlgaeDICE: Policy gradient from arbitrary experience. <em>arXiv preprint arXiv:1912.02074</em>.</p>
-</div>
-<div id="ref-nair2020accelerating">
-<p><span class="smallcaps">Nair, A., Dalal, M., Gupta, A., and Levine, S.</span> 2020. Accelerating online reinforcement learning with offline datasets. <em>arXiv preprint arXiv:2006.09359</em>.</p>
-</div>
-<div id="ref-namkoong2020off">
-<p><span class="smallcaps">Namkoong, H., Keramati, R., Yadlowsky, S., and Brunskill, E.</span> 2020. Off-policy policy evaluation for sequential decisions under unobserved confounding. <em>arXiv preprint arXiv:2003.05623</em>.</p>
-</div>
-<div id="ref-peng2019advantage">
-<p><span class="smallcaps">Peng, X.B., Kumar, A., Zhang, G., and Levine, S.</span> 2019. Advantage-weighted regression: Simple and scalable off-policy reinforcement learning. <em>arXiv preprint arXiv:1910.00177</em>.</p>
-</div>
-<div id="ref-prasad2020defining">
-<p><span class="smallcaps">Prasad, N., Engelhardt, B., and Doshi-Velez, F.</span> 2020. Defining admissible rewards for high-confidence policy evaluation in batch reinforcement learning. <em>Proceedings of the acm conference on health, inference, and learning</em>, 1–9.</p>
-</div>
-<div id="ref-precup2000eligibility">
-<p><span class="smallcaps">Precup, D.</span> 2000. Eligibility traces for off-policy policy evaluation. <em>Computer Science Department Faculty Publication Series</em>, 80.</p>
-</div>
-<div id="ref-precup2001off">
-<p><span class="smallcaps">Precup, D., Sutton, R.S., and Dasgupta, S.</span> 2001. Off-policy temporal-difference learning with function approximation. <em>ICML</em>, 417–424.</p>
-</div>
-<div id="ref-shortreed2011informing">
-<p><span class="smallcaps">Shortreed, S.M., Laber, E., Lizotte, D.J., Stroup, T.S., Pineau, J., and Murphy, S.A.</span> 2011. Informing sequential clinical decision-making through reinforcement learning: An empirical study. <em>Machine learning</em>.</p>
-</div>
-<div id="ref-siegel2020keep">
-<p><span class="smallcaps">Siegel, N., Springenberg, J.T., Berkenkamp, F., et al.</span> 2020. Keep doing what worked: Behavior modelling priors for offline reinforcement learning. <em>ICLR</em>.</p>
-</div>
-<div id="ref-Sohn2020BRPOBR">
-<p><span class="smallcaps">Sohn, S., Chow, Y., Ooi, J., et al.</span> 2020. BRPO: Batch residual policy optimization. <em>arXiv:2002.05522</em>.</p>
-</div>
-<div id="ref-sussexstitched">
-<p><span class="smallcaps">Sussex, S., Gottesman, O., Liu, Y., Murphy, S., Brunskill, E., and Doshi-Velez, F.</span> Stitched trajectories for off-policy learning..</p>
-</div>
-<div id="ref-sutton2009fastgtd">
-<p><span class="smallcaps">Sutton, R.S., Maei, H.R., Precup, D., et al.</span> 2009. Fast gradient-descent methods for temporal-difference learning with linear function approximation. <em>Proceedings of the 26th annual international conference on machine learning</em>, 993–1000.</p>
-</div>
-<div id="ref-wang2020critic">
-<p><span class="smallcaps">Wang, Z., Novikov, A., Żołna, K., et al.</span> 2020. Critic Regularized Regression. <em>arXiv e-prints</em>, arXiv:2006.15134.</p>
-</div>
-<div id="ref-wu2019behavior">
-<p><span class="smallcaps">Wu, Y., Tucker, G., and Nachum, O.</span> 2019. Behavior regularized offline reinforcement learning. <em>arXiv preprint arXiv:1911.11361</em>.</p>
-</div>
-<div id="ref-Xie2020QAS">
-<p><span class="smallcaps">Xie, T. and Jiang, N.</span> 2020. Q* approximation schemes for batch reinforcement learning: A theoretical comparison. <em>ArXiv</em> <em>abs/2003.03924</em>.</p>
-</div>
-<div id="ref-yu2020mopo">
-<p><span class="smallcaps">Yu, T., Thomas, G., Yu, L., et al.</span> 2020. MOPO: Model-based offline policy optimization. <em>arXiv preprint arXiv:2005.13239</em>.</p>
-</div>
-</div> -->
