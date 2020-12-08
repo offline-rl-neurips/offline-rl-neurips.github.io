@@ -25,9 +25,9 @@
     id: 40
     kind: oral
     supplement: false
-    title: 'DeepAvergers: Offline Reinforcement learning by solving derived non-parametric
+    title: 'DeepAveragers: Offline Reinforcement learning by solving derived non-parametric
       MDPs'
-    url: https://drive.google.com/drive/folders/1qN4fMRhRRka__WggPJM9ethFSGG1qhIa?usp=sharing
+    url: https://www.youtube.com/watch?v=gecEH4iWMAU&feature=youtu.be
   - authors: Caglar Gulcehre, Sergio Gomez, Jakub Sygnowski, Ziyu Wang,  Tom Le Paine,
       Konrad Zolna, Razvan Pascanu, Yutian Chen, Matt Hoffman
     id: 41
@@ -102,7 +102,8 @@
     title: 'M$^3$Rec: An Offline Meta-level Model-based Reinforcement Learning Approach
       for Cold-Start Recommendation'
     url: https://www.dropbox.com/s/s8zqj2fagbs03gs/nips_workshop_video.mp4?dl=0
-  - authors: Deployment-Efficient Reinforcement Learning via Model-Based Offline Optimization
+  - authors: Tatsuya Matsushima, Hiroki Furuta, Yutaka Matsuo, Ofir Nachum, Shixiang
+      Gu
     id: 11
     kind: poster
     supplement: false
@@ -221,7 +222,7 @@
     id: 35
     kind: poster
     supplement: true
-    title: Risk-averse Offline Reinforcement Lerarning
+    title: Risk-Averse Offline Reinforcement Learning
     url: https://youtu.be/nXBF0Pcj-qI
   - authors: Qiang He, Xinwen Hou, Yu Liu
     id: 37
@@ -260,7 +261,7 @@
     kind: poster
     supplement: true
     title: 'Double Explore-then-Commit: Asymptotic Optimality and Beyond'
-    url: ''
+    url: https://www.youtube.com/watch?v=BOALttyDRaA&feature=youtu.be
   - authors: Ming Yin, Yu Bai, and Yu-Xiang Wang
     id: 48
     kind: poster
